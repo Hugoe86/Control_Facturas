@@ -1,0 +1,45 @@
+﻿
+<div style="height:50vh !important; width:100% !important;" class="container">
+    <div class="panel panel-color panel-info" id="panel1" style="margin-bottom:5px !important">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <i style="color: white;" class="glyphicon glyphicon-filter"></i>&nbsp;Filtros de b&uacute;squeda
+            </h3>
+            <div class="panel-options">
+                <a href="#" data-toggle="panel">
+                    <span class="collapse-icon">–</span>
+                    <span class="expand-icon">+</span>
+                </a>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-3">
+                    <label class="fuente_lbl_controles">Tipo de Operación</label>
+                    <select id="cmb_tipo_operacion_filtro" class="form-control" style="width:100%"></select>
+                </div>
+                <div class="col-md-3">
+                    <label class="fuente_lbl_controles">Validaciones</label>
+                    <select id="cmb_busqueda_nombre" class="form-control" style="width:100%"></select>
+                </div>
+                <div class="col-md-3">
+                    <label class="fuente_lbl_controles">Estatus</label>
+                    <select id="cmb_busqueda_estatus" class="form-control" style="width:100%"></select>
+                </div>
+                <div class="col-md-2 col-md-offset-1">
+                    <button type="button" id="btn_busqueda" class="btn btn-info btn-block" title="Buscar" style="margin-top:18px;"><i class="fa fa-search">&nbsp;Buscar</i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="toolbar" style="margin-left: 5px;margin-top: 10px;">
+        <div class="btn-group" role="group" style="margin-left: 5px;">
+
+            <button id="btn_inicio" type="button" class="btn btn-info btn-sm" title="Inicio"><i class="glyphicon glyphicon-home"></i></button>
+            <button id="btn_nuevo" type="button" class="btn btn-info btn-sm" title="Nuevo"><i class="glyphicon glyphicon-plus"></i></button>
+        </div>
+    </div>
+    <table id="tbl_validaciones" data-toolbar="#toolbar" class="table table-responsive"></table>
+</div>
+

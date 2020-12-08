@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f2fb272775074bf58efaf90009c32e1b" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="Entity_Control_Facturas.APDoc" Width="1.5" PointX="12.75" PointY="15.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Accesos" Width="1.5" PointX="0.75" PointY="2.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Empresas" Width="1.5" PointX="2.75" PointY="2.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Entidades_Empresas" Width="1.5" PointX="4.75" PointY="2.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Estatus" Width="1.5" PointX="4.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Menus" Width="1.5" PointX="12.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Modulos" Width="1.5" PointX="14.75" PointY="2.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Niveles" Width="1.5" PointX="10.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Parametros" Width="1.5" PointX="14.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Permisos_Sistemas" Width="1.5" PointX="3" PointY="20.5" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Registro_Accesos" Width="1.5" PointX="14.75" PointY="15.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Rel_Usuarios_Roles" Width="1.5" PointX="15.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Roles" Width="1.5" PointX="7.75" PointY="17.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Roles_Sucursales" Width="1.5" PointX="15.75" PointY="12.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Usuarios" Width="1.5" PointX="3" PointY="15.5" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Usuarios_Password" Width="1.5" PointX="16.75" PointY="2.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Apl_Usuarios_Permisos" Width="1.5" PointX="5.25" PointY="17.375" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Cat_Areas" Width="1.5" PointX="0.75" PointY="11.25" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Cat_Conceptos" Width="1.5" PointX="0.75" PointY="7.125" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Cat_Cuentas" Width="1.5" PointX="9" PointY="4.25" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Cat_Entidades" Width="1.5" PointX="9" PointY="0.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Cat_Relacion_Entidad_Cuenta" Width="1.5" PointX="11.25" PointY="2.625" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Cat_Validaciones" Width="1.5" PointX="3" PointY="10.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Cat_Validaciones_Usuarios" Width="1.5" PointX="5.25" PointY="14.125" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Ope_Anticipos" Width="1.5" PointX="16.75" PointY="5.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Ope_Facturas" Width="1.5" PointX="8.25" PointY="8.625" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Ope_Facturas_Anexos" Width="1.5" PointX="10.5" PointY="18.625" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Ope_Facturas_Anticipos" Width="1.5" PointX="10.5" PointY="8.375" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Ope_Facturas_Movimientos" Width="1.5" PointX="10.5" PointY="15.75" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.Ope_Facturas_Pagos" Width="1.5" PointX="13.5" PointY="11.25" />
+        <EntityTypeShape EntityType="Entity_Control_Facturas.XREFileAdmin" Width="1.5" PointX="16.75" PointY="15.75" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_UsuarioPermisoIDPermisos" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Apl_Usuarios_Cat_Areas" />
+        <AssociationConnector Association="Entity_Control_Facturas.Fk_UsuarioID_ValidacionesUsuarios_Users" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_UsuarioPermisoIDUsuarios" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Cat_Validaciones_Cat_Areas" />
+        <AssociationConnector Association="Entity_Control_Facturas.Fk_ConceptoID_Validaciones_Conceptos" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Conceptos" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Cat_Relacion_Entidad_Cuenta_Cat_Cuentas" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Cat_Relacion_Entidad_Cuenta_Cat_Entidades" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Ope_Facturas_Pagos_Cat_Relacion_Entidad_Cuenta" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Validaciones" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Validaciones1" />
+        <AssociationConnector Association="Entity_Control_Facturas.Fk_ValidacionID_ValidacionesUsuarios_Validaciones" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Ope_Facturas_Anexos_Ope_Facturas" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Ope_Facturas_Anticipos_Ope_Facturas" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Ope_Facturas_Movimientos_Ope_Facturas" />
+        <AssociationConnector Association="Entity_Control_Facturas.FK_Ope_Facturas_Pagos_Ope_Facturas" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

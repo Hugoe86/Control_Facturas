@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82E5BAC7-8405-4941-A9E9-4371E609E5D7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>datos_cambios_procesos</RootNamespace>
+    <AssemblyName>datos-cambios_procesos</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\web-control_riesgos\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="APDoc.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Accesos.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Empresas.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Entidades_Empresas.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Estatus.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Menus.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Modulos.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Niveles.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Parametros.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Permisos_Sistemas.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Registro_Accesos.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Rel_Usuarios_Roles.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Roles.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Roles_Sucursales.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Usuarios.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Usuarios_Password.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Apl_Usuarios_Permisos.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Areas.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Conceptos.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Cuentas.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Entidades.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Relacion_Entidad_Cuenta.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Validaciones.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Cat_Validaciones_Usuarios.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity_Control_Facturas.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity_Control_Facturas.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity_Control_Facturas.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entity_Control_Facturas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Entity_Control_Facturas.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Anticipos.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Facturas.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Facturas_Anexos.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Facturas_Anticipos.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Facturas_Movimientos.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Ope_Facturas_Pagos.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XREFileAdmin.cs">
+      <DependentUpon>Entity_Control_Facturas.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="Entity_Control_Facturas.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Entity_Control_Facturas.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Entity_Control_Facturas.edmx.diagram">
+      <DependentUpon>Entity_Control_Facturas.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Entity_Control_Facturas.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Entity_Control_Facturas.edmx</DependentUpon>
+      <LastGenOutput>Entity_Control_Facturas.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entity_Control_Facturas.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Entity_Control_Facturas.edmx</DependentUpon>
+      <LastGenOutput>Entity_Control_Facturas.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="obj\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

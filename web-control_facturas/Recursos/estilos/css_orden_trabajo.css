@@ -1,0 +1,7 @@
+﻿.panel-body {
+    overflow: hidden;
+    border-color: white !important;
+}
+.panel {
+    overflow:initial !important;
+}

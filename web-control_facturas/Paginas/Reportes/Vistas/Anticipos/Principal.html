@@ -1,0 +1,84 @@
+﻿
+<div style="height:50vh !important; width:100% !important;" class="container">
+    <div class="panel panel-color panel-info" id="panel1" style="margin-bottom:5px !important">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <i style="color: white;" class="glyphicon glyphicon-filter"></i>&nbsp;Filtros de b&uacute;squeda
+            </h3>
+            <div class="panel-options">
+                <a href="#" data-toggle="panel">
+                    <span class="collapse-icon">–</span>
+                    <span class="expand-icon">+</span>
+                </a>
+            </div>
+        </div>
+        <div class="panel-body">
+
+
+            <!-- ************************************************************************************************************************************ -->
+            <!-- ************************************************************************************************************************************ -->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fuente_lbl_controles">Folio solicitud de cheque</label>
+                    <select id="cmb_busqueda_factura" class="form-control" style="width:100%"></select>
+                </div>
+
+                <div class="col-md-4">
+                    <label class="fuente_lbl_controles">Anticipo</label>
+                    <select id="cmb_anticipo_factura" class="form-control" style="width:100%"></select>
+                </div>
+
+
+                <!--<div class="col-md-4">
+                    <label class="fuente_lbl_controles">tipo</label>
+                    <select id="cmb_busqueda_tipo" class="form-control" style="width:100%"></select>
+                </div>-->
+            </div>
+
+            <!-- ************************************************************************************************************************************ -->
+            <!-- ************************************************************************************************************************************ -->
+            <div class="row">
+                <div class="col-md-4">
+                    <label class="fuente_lbl_controles">fecha de recepcion de factura inicio</label>
+                    <div class="input-group date" id="dtp_txt_fecha_inicio">
+                        <input type="text" id="txt_fecha_inicio"
+                               class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <label class="fuente_lbl_controles">fecha de recepcion de factura fin</label>
+                    <div class="input-group date" id="dtp_txt_fecha_termino">
+                        <input type="text" id="txt_fecha_termino"
+                               class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <button type="button" id="btn_busqueda" class="btn btn-info btn-block" title="Buscar"><i class="fa fa-search">&nbsp;Buscar</i></button>
+                </div>
+            </div>
+            <!-- ************************************************************************************************************************************ -->
+            <!-- ************************************************************************************************************************************ -->
+        </div>
+    </div>
+
+    <div id="toolbar" style="margin-left: 5px;margin-top: 10px;">
+        <div class="btn-group" role="group" style="margin-left: 5px;">
+
+            <button id="btn_inicio" type="button" class="btn btn-info btn-sm" title="Inicio"><i class="glyphicon glyphicon-home"></i></button>
+            <button id="btn_pdf" type="button" class="btn btn-red btn-sm" title="Pdf"><i class="fa fa-file-pdf-o"></i></button>
+            <button id="btn_excel" type="button" class="btn btn-green btn-sm" title="Excel"><i class="fa fa-file-excel-o"></i></button>
+
+        </div>
+    </div>
+    <table id="tbl_reporte_plantilla" data-toolbar="#toolbar" class="table table-responsive"></table>
+</div>
+

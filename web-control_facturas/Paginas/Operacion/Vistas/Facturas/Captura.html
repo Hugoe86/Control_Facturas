@@ -1,0 +1,352 @@
+﻿
+<div id="modal_factura" style="height:100vh !important; width:100% !important;" class="container">
+    <!-- ************************************************************************************************************************************ -->
+    <!-- ************************************************************************************************************************************ -->
+
+    <div id="div_botones_captura" class="row" style="color:#40bbea;margin-top:8px; margin-bottom:8px">
+        <div class="col-md-8">
+            <div style="display: none;">
+                <label class="fuente_lbl_controles">(*) campos ocultos</label>
+                <input id="txt_factura_id" type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-4" style="text-align:right">
+            <div class="btn-group" role="group" style="margin-left: 5px;">
+                <button id="btn_guardar_seguir_captura" class="btn btn-success" title="Guardar y seguir"><i class="fa fa-check"></i><span id="spn_guardar">&nbsp;Guardar y seguir</span></button>
+                <button id="btn_guardar_salir_captura" class="btn btn-warning" title="Guardar y salir"><i class="fa fa-check"></i><span id="spn_guardar">&nbsp;Guardar y salir</span></button>
+                <button id="btn_cancelar_captura" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ************************************************************************************************************************************ -->
+    <!-- ************************************************************************************************************************************ -->
+
+    <div id="div_botones_editar" class="row" style="color:#40bbea;margin-top:8px; margin-bottom:8px">
+        <div class="col-md-8">
+            <div style="display: none;">
+                <label class="fuente_lbl_controles">(*) campos ocultos</label>
+                <input id="txt_factura_id" type="text" class="form-control" />
+            </div>
+        </div>
+        <div class="col-md-4" style="text-align:right">
+            <div class="btn-group" role="group" style="margin-left: 5px;">
+                <button id="btn_guardar" class="btn btn-success" title="Guardar"><i class="fa fa-check"></i><span id="spn_guardar">&nbsp;Guardar</span></button>
+                <button id="btn_cancelar" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+            </div>
+        </div>
+    </div>
+    <!-- ************************************************************************************************************************************ -->
+    <!-- ************************************************************************************************************************************ -->
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel" id="pnl_datos_oc" style="margin-bottom:10px !important">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: blue;" class="glyphicon glyphicon-file"></i>&nbsp;Datos de la factura
+                    </h3>
+
+                </div>
+                <div class="panel-body">
+                    <!-- ************************************************************************************************************************************ -->
+                    <!-- ************************************************************************************************************************************ -->
+
+                    <div class="row" style="padding-top:10px;">
+
+                        <div class="col-md-3">
+                            <i class="fa fa-bookmark" style="color: #32CD32;font-size: 12px;"></i>&nbsp;Datos del folio
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fa fa-bookmark" style="color: #1E90FF;font-size: 12px;"></i>&nbsp;Datos del XML
+                        </div>
+                    </div>
+                    <!-- ************************************************************************************************************************************ -->
+                    <!-- ************************************************************************************************************************************ -->
+                    <div class="row" style="padding-top:10px;">
+
+                        <div class="col-md-8">
+
+                            <div class="row" style="padding-top:10px;">
+
+                                <div class="col-md-6">
+                                    <label class="fuente_lbl_controles">(*) Tipo Concepto</label>
+                                    <select id="cmb_tipo_concepto" style="width:100%"></select>
+                                </div>
+
+
+                                <div class="col-md-6">
+                                    <label class="fuente_lbl_controles">
+                                        (*) <i class="fa fa-bookmark" style="color: #32CD32;font-size: 12px;"></i>
+                                        Folio
+                                    </label>
+
+                                    <select id="cmb_folio" style="width:100%"></select>
+                                </div>
+                            </div>
+
+                            <br />
+
+                            <!-- ************************************************************************************************************************************ -->
+                            <!-- ************************************************************************************************************************************ -->
+
+                            <div class="row" id="div_subir_archivo_operacion">
+
+                                <div class="col-md-6">
+                                    <label class="fuente_lbl_controles">*Adjuntar Archivo XML</label>
+                                    <input id="fl_adjuntar_archivo_operacion" type="file" class="form-control-file" />
+                                    <div id="bugs"></div>
+                                </div>
+                                <div class="col-md-2">
+                                    <button id="btn_leer_archivo_operacion" class="btn btn-blue btn-block" style="margin-top:19px;" type="button"><i class="fa fa-upload"></i>&nbsp;Validar XML</button>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <label class="fuente_lbl_controles">(*) <i class="fa fa-bookmark" style="color: #1E90FF;font-size: 12px;"></i> UUID XML</label>
+                                    <input id="txt_uuid_xml" type="text" class="form-control" placeholder="" style="margin-top:0px" maxlength="100" disabled />
+                                </div>
+
+                                <div class="col-md-4" style="display:none;">
+                                    <label class="fuente_lbl_controles">(*) Nombre y tipo archivo</label>
+                                    <input id="txt_nombre_archivo_xml" type="text" class="form-control" placeholder="" style="margin-top:0px" maxlength="100" disabled />
+                                    <input id="txt_tipo_archivo_xml" type="text" class="form-control" placeholder="" style="margin-top:0px" maxlength="100" disabled />
+                                </div>
+                            </div>
+                            <!-- ************************************************************************************************************************************ -->
+                            <!-- ************************************************************************************************************************************ -->
+                            <br />
+                            <!-- ************************************************************************************************************************************ -->
+                            <!-- ************************************************************************************************************************************ -->
+                            <div class="row" style="padding-top:10px;">
+                                <div class="col-md-4">
+                                    <label class="fuente_lbl_controles">(*) Fecha recepcion</label>
+                                    <div class="input-group date" id="dtp_txt_fecha_recepcion">
+                                        <input type="text" id="txt_fecha_recepcion"
+                                               class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="fuente_lbl_controles">
+                                        (*) <i class="fa fa-bookmark" style="color: #32CD32;font-size: 12px;"></i>
+                                        Fecha de la factura
+                                    </label>
+
+                                    <div class="input-group date" id="dtp_txt_fecha_factura">
+                                        <input type="text" id="txt_fecha_factura"
+                                               class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" disabled />
+                                        <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="fuente_lbl_controles"><i class="fa fa-bookmark" style="color: #32CD32;font-size: 12px;"></i> RFC</label>
+                                    <input id="txt_rfc" type="text" class="form-control" placeholder="" style="margin-top:0px" maxlength="100" disabled />
+                                </div>
+                            </div>
+                            <!-- ************************************************************************************************************************************ -->
+                            <!-- ************************************************************************************************************************************ -->
+                            <div class="row" style="padding-top:10px;">
+                                <div class="col-md-12">
+                                    <label class="fuente_lbl_controles">(*) <i class="fa fa-bookmark" style="color: #1E90FF;font-size: 12px;"></i> Razon social</label>
+                                    <input id="txt_razon_social" type="text" class="form-control" placeholder="" style="margin-top:0px" maxlength="100" disabled />
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                        <div class="col-md-4">
+
+                            <i class="fa fa-bookmark" style="color: #1E90FF;font-size: 12px;"></i>&nbsp;Selecciona un concepto de la lista del XML
+
+                            <div id="div_conceptos_xml" style="width:100%;padding-top:30px;"></div>
+
+                        </div>
+
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+                    </div>
+                    <!-- ************************************************************************************************************************************ -->
+                    <!-- ************************************************************************************************************************************ -->
+                    <br />
+
+
+                    <!-- ************************************************************************************************************************************ -->
+                    <!-- ************************************************************************************************************************************ -->
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel" id="pnl_datos_oc" style="margin-bottom:10px !important">
+
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <i style="color: red;" class="glyphicon glyphicon-usd">&nbsp;Montos</i>
+                    </h3>
+
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <ul class="nav nav-pills nav-fill nav-tabs-justified Tabs_">
+                                <li class="active" id="Li_Pago">
+                                    <a href="#Tab_Pago" data-toggle="tab">
+                                        <span class="visible-xs"><i class="fa fa-clipboard"></i></span>
+                                        <span class="hidden-xs">Pagos</span>
+                                    </a>
+                                </li>
+                                <li id="Li_Anticipos">
+                                    <a href="#Tab_Anticipos" data-toggle="tab">
+                                        <span class="visible-xs"><i class="fa fa-check-square-o"></i></span>
+                                        <span class="hidden-xs">Anticipos</span>
+                                    </a>
+                                </li>
+                            </ul>
+
+
+                            <div class="tab-content">
+                                <!--******************************************************************************************************************************-->
+                                <!--******************************************************************************************************************************-->
+                                <!--******************************************************************************************************************************-->
+                                <div class="tab-pane active" id="Tab_Pago">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="panel" id="pnl_datos_oc" style="margin-bottom:10px !important">
+
+                                                <!--<div class="panel-heading">
+                                                    <h3 class="panel-title">
+                                                        <i style="color: blue;" class="glyphicon glyphicon-file"></i>&nbsp;Cuentas-Entidades
+                                                    </h3>
+
+                                                </div>-->
+
+                                                <div class="panel-body">
+                                                    <div class="row">
+
+                                                        <div class="col-md-3">
+                                                            <label class="fuente_lbl_controles">(*) Cuenta</label>
+                                                            <select id="cmb_cuenta" style="width:100%"></select>
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <label class="fuente_lbl_controles">(*) Entidad</label>
+                                                            <select id="cmb_entidad" style="width:100%"></select>
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <label class="fuente_lbl_controles">(*) Monto</label>
+                                                            <input id="txt_monto_pago" type="text" class="form-control" placeholder="" style="margin-top:0px" maxlength="100" />
+                                                        </div>
+                                                        <div class="col-md-3">
+                                                            <button id="btn_agregar_cuenta" type="button" class="btn btn-success btn-block" title="Agregar Cuenta" style="margin: 20px; padding-right:5px; padding-left:5px;">
+                                                                <i class="fa fa-plus"></i>&nbsp;&nbsp;Agregar
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <!-- ************************************************************************************************************************************ -->
+                                                    <!-- ************************************************************************************************************************************ -->
+
+                                                    <div class="row">
+                                                        <div class="col-md-12 text-center">
+                                                            <table id="tbl_facturas_cuentas" class="table table-responsive"></table>
+                                                        </div>
+                                                    </div>
+                                                    <!-- ************************************************************************************************************************************ -->
+                                                    <!-- ************************************************************************************************************************************ -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--******************************************************************************************************************************-->
+                                <!--******************************************************************************************************************************-->
+                                <div class="tab-pane" id="Tab_Anticipos">
+                                    <!-- ************************************************************************************************************************************ -->
+                                    <!-- ************************************************************************************************************************************ -->
+                                    <br />
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <label class="fuente_lbl_controles">(*) Anticipo</label>
+                                            <select id="cmb_anticipo" style="width:100%"></select>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="fuente_lbl_controles">Saldo</label>
+                                            <input id="txt_saldo_anticipo" type="text" class="form-control" placeholder="Saldo" style="margin-top:0px" maxlength="20" disabled />
+                                        </div>
+                                    </div>
+                                    <!-- ************************************************************************************************************************************ -->
+                                    <!-- ************************************************************************************************************************************ -->
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="fuente_lbl_controles">(*) Monto</label>
+                                            <input id="txt_monto_anticipo" type="text" class="form-control" placeholder="Monto" style="margin-top:0px" maxlength="20" />
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label class="fuente_lbl_controles">(*) Fecha</label>
+
+                                            <div class="input-group date" id="dtp_txt_fecha_anticipo">
+                                                <input type="text" id="txt_fecha_anticipo"
+                                                       class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                                <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                </span>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-md-3" style="text-align:right">
+
+                                            <button id="btn_agregar_anticipo" class="btn btn-success btn-block" style="margin: 20px; padding-right:5px; padding-left:5px;" title="Agregar Anticipo"><i class="fa fa-plus"></i><span id="spn_agregar_anticipo">&nbsp;Agregar</span></button>
+
+                                        </div>
+
+                                    </div>
+
+                                    <br />
+                                    <!-- ************************************************************************************************************************************ -->
+                                    <!-- ************************************************************************************************************************************ -->
+                                    <div class="row">
+
+                                        <div class="col-md-12 text-center">
+                                            <table id="tbl_facturas_anticipos_operacion" class="table table-responsive"></table>
+                                        </div>
+
+                                    </div>
+                                    <!-- ************************************************************************************************************************************ -->
+                                    <!-- ************************************************************************************************************************************ -->
+                                    <div class="row" style="display:none;">
+                                        <div class="col-md-12 text-center">
+                                            <table id="tbl_facturas_anticipos_eliminados_operacion" class="table table-responsive"></table>
+                                        </div>
+
+                                    </div>
+                                    <!-- ************************************************************************************************************************************ -->
+                                    <!-- ************************************************************************************************************************************ -->
+
+                                </div>
+                                <!--******************************************************************************************************************************-->
+                                <!--******************************************************************************************************************************-->
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

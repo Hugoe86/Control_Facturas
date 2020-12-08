@@ -1,0 +1,98 @@
+﻿
+
+<div class="modal fade" id="modal_facturas_pagos" name="modal_facturas_pagos" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close cancelar" data-dismiss="modal" aria-label="Close" onclick="_cancelar_modal_pagos_click();">
+                    <i class="fa fa-times text-red"></i>
+                </button>
+                <h3 class="modal-title" id="myModalLabel">
+                    <label id="lbl_titulo_pagos"></label>
+                </h3>
+            </div>
+
+            <div class="modal-body">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-color panel-default" id="pnl_datos_oc" style="margin-bottom:10px !important">
+                            <div class="panel-heading">
+                            </div>
+                            <div class="panel-body">
+                                <!-- ************************************************************************************************************************************ -->
+                                <!-- ************************************************************************************************************************************ -->
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="display: block;">
+                                            <input id="txt_factura_pagos_id" type="hidden" class="form-control" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************************************************************************************************************************************ -->
+                                <!-- ************************************************************************************************************************************ -->
+                                <!-- ************************************************************************************************************************************ -->
+                                <!-- ************************************************************************************************************************************ -->
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <i class="fa fa-credit-card text-blue" style="font-size:24px;">
+                                            Total&nbsp;$&nbsp;
+                                            <label id="lbl_total_pagos" 
+                                                   class="text-red" 
+                                                   style="font-size:24px;">xxx</label>
+                                        </i>
+                                        
+                                    </div>
+                                    <div class="col-md-3">
+
+                                    </div>
+
+                                    <div class="col-md-3" style="text-align:right">
+                                        <div class="btn-group" role="group" style="margin-left: 5px; padding-top:15px;">
+                                            <button id="btn_cancelar_pagos" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <br />
+                                <!-- ************************************************************************************************************************************ -->
+                                <!-- ************************************************************************************************************************************ -->
+                                <div class="row">
+
+                                    <div class="col-md-12 text-center">
+                                        <table id="tbl_facturas_pagos" class="table table-responsive"></table>
+                                    </div>
+
+                                </div>
+                                <!-- ************************************************************************************************************************************ -->
+                                <!-- ************************************************************************************************************************************ -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <!-- ************************************************************************************************************************************ -->
+                <!-- ************************************************************************************************************************************ -->
+                <div class="row" style="color:#40bbea;margin-top:8px; margin-bottom:8px">
+                    <div class="col-md-6">
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

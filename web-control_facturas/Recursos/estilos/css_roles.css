@@ -1,0 +1,106 @@
+﻿.GridView_1
+{
+    font-family :'Roboto Bold';
+    font-size:12px !important;
+    color: #2F4E7D;
+    font-weight:normal;
+    padding: 10px;
+    vertical-align:middle;
+    background-color:White;
+    border-style:none;
+    border-width:0px;
+    width:98%;    
+    text-align:left;
+}
+.GridHeader
+ {
+     font-family: 'Roboto Bold' ;
+     font-size:12px !important;
+     font-weight: 400;
+     background-color: #55acee !important;
+     color: #ffffff;
+     text-align: left;
+     height: 23px;
+ }
+
+.GridAltItem
+{
+     font-size:12px !important;
+     background-color:#e7f3fd;
+     color:#000;
+}
+
+.GridSelected
+{
+     background-color:#A4A4A4;
+     color:#25406D;
+     font-size:12px !important;
+}
+.GridItem
+{
+ background-color:white;
+ color:#000;
+     font-size:12px !important;
+}
+
+.GridView_Nested
+{
+    font-family: Arial, Sans-Serif;
+    font-size:small;
+    table-layout: inherit;
+    border-collapse: collapse;
+    border:#666 2px solid;
+}
+.GridHeader_Nested
+ {
+    background-image: url(../imagenes/gridview/HeaderChrome.jpg);
+    background-position:center;
+    background-repeat:repeat-x;
+    background-color:#1d1d1d;
+	border-bottom: #1d1d1d 1px solid;
+	color:White;
+    text-align:center !important;
+ }
+
+.GridAltItem_Nested
+{
+ background-color: #f0f0f0;
+}
+
+.GridSelected_Nested
+{
+ background-color: #ffff66;
+}
+.GridItem_Nested
+{
+ background-color: #c9c9c9;
+}
+
+table tr td {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-left: 4px !important;
+    font-family: 'Roboto Bold';
+    font-size: 10px !important;
+    border: solid 1px #dddddd;
+    text-transform: uppercase;
+}
+
+table tr th {
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+    padding-left: 4px !important;
+    font-size: 11px !important;
+    font-family: 'Century Gothic';
+    font-weight: 600;
+    border: solid 1px #dddddd;
+}
+
+#ContentPlaceHolder1_Contenedor_Roles_Setup_Access_Listar_Accesos_Grid_Menus_Grid_Submenus_0 tr th:not(:first-child)  {
+    text-align: center;
+}
+#ContentPlaceHolder1_Contenedor_Roles_Setup_Access_Listar_Accesos_Grid_Menus tr th:e() )  {
+    text-align: center;
+}
+
+

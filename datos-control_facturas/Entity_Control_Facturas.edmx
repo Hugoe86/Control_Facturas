@@ -1,0 +1,2645 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Entity_Control_Facturas.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="APDoc">
+          <Key>
+            <PropertyRef Name="Acct" />
+            <PropertyRef Name="DocType" />
+            <PropertyRef Name="RecordID" />
+            <PropertyRef Name="RefNbr" />
+            <PropertyRef Name="Sub" />
+          </Key>
+          <Property Name="Acct" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="AddlCost" Type="smallint" Nullable="false" />
+          <Property Name="ApplyAmt" Type="float" Nullable="false" />
+          <Property Name="ApplyDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="ApplyRefNbr" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="BatNbr" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="BatSeq" Type="int" Nullable="false" />
+          <Property Name="BWAmt" Type="float" Nullable="false" />
+          <Property Name="CashAcct" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="CashSub" Type="char" MaxLength="24" Nullable="false" />
+          <Property Name="ClearAmt" Type="float" Nullable="false" />
+          <Property Name="ClearDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="CodeType" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="CpnyID" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Crtd_DateTime" Type="smalldatetime" Nullable="false" />
+          <Property Name="Crtd_Prog" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="Crtd_User" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="CurrentNbr" Type="smallint" Nullable="false" />
+          <Property Name="CuryBWAmt" Type="float" Nullable="false" />
+          <Property Name="CuryDiscBal" Type="float" Nullable="false" />
+          <Property Name="CuryDiscTkn" Type="float" Nullable="false" />
+          <Property Name="CuryDocBal" Type="float" Nullable="false" />
+          <Property Name="CuryEffDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="CuryId" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="CuryMultDiv" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="CuryOrigDocAmt" Type="float" Nullable="false" />
+          <Property Name="CuryPmtAmt" Type="float" Nullable="false" />
+          <Property Name="CuryRate" Type="float" Nullable="false" />
+          <Property Name="CuryRateType" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="CuryTaxTot00" Type="float" Nullable="false" />
+          <Property Name="CuryTaxTot01" Type="float" Nullable="false" />
+          <Property Name="CuryTaxTot02" Type="float" Nullable="false" />
+          <Property Name="CuryTaxTot03" Type="float" Nullable="false" />
+          <Property Name="CuryTxblTot00" Type="float" Nullable="false" />
+          <Property Name="CuryTxblTot01" Type="float" Nullable="false" />
+          <Property Name="CuryTxblTot02" Type="float" Nullable="false" />
+          <Property Name="CuryTxblTot03" Type="float" Nullable="false" />
+          <Property Name="Cycle" Type="smallint" Nullable="false" />
+          <Property Name="DfltDetail" Type="smallint" Nullable="false" />
+          <Property Name="DirectDeposit" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="DiscBal" Type="float" Nullable="false" />
+          <Property Name="DiscDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="DiscTkn" Type="float" Nullable="false" />
+          <Property Name="Doc1099" Type="smallint" Nullable="false" />
+          <Property Name="DocBal" Type="float" Nullable="false" />
+          <Property Name="DocClass" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="DocDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="DocDesc" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="DocType" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="DueDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="Econfirm" Type="char" MaxLength="18" Nullable="false" />
+          <Property Name="Estatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="ExcludeFreight" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="FreightAmt" Type="float" Nullable="false" />
+          <Property Name="InstallNbr" Type="smallint" Nullable="false" />
+          <Property Name="InvcDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="InvcNbr" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="LCCode" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="LineCntr" Type="int" Nullable="false" />
+          <Property Name="LUpd_DateTime" Type="smalldatetime" Nullable="false" />
+          <Property Name="LUpd_Prog" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="LUpd_User" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="MasterDocNbr" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="NbrCycle" Type="smallint" Nullable="false" />
+          <Property Name="NoteID" Type="int" Nullable="false" />
+          <Property Name="OpenDoc" Type="smallint" Nullable="false" />
+          <Property Name="OrigDocAmt" Type="float" Nullable="false" />
+          <Property Name="PayDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="PayHoldDesc" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="PC_Status" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="PerClosed" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="PerEnt" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="PerPost" Type="char" MaxLength="6" Nullable="false" />
+          <Property Name="PmtAmt" Type="float" Nullable="false" />
+          <Property Name="PmtID" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="PmtMethod" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="PONbr" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="PrePay_RefNbr" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="ProjectID" Type="char" MaxLength="16" Nullable="false" />
+          <Property Name="RecordID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RefNbr" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Retention" Type="smallint" Nullable="false" />
+          <Property Name="RGOLAmt" Type="float" Nullable="false" />
+          <Property Name="Rlsed" Type="smallint" Nullable="false" />
+          <Property Name="S4Future01" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="S4Future02" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="S4Future03" Type="float" Nullable="false" />
+          <Property Name="S4Future04" Type="float" Nullable="false" />
+          <Property Name="S4Future05" Type="float" Nullable="false" />
+          <Property Name="S4Future06" Type="float" Nullable="false" />
+          <Property Name="S4Future07" Type="smalldatetime" Nullable="false" />
+          <Property Name="S4Future08" Type="smalldatetime" Nullable="false" />
+          <Property Name="S4Future09" Type="int" Nullable="false" />
+          <Property Name="S4Future10" Type="int" Nullable="false" />
+          <Property Name="S4Future11" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="S4Future12" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Selected" Type="smallint" Nullable="false" />
+          <Property Name="Status" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Sub" Type="char" MaxLength="24" Nullable="false" />
+          <Property Name="Subcontract" Type="char" MaxLength="16" Nullable="false" />
+          <Property Name="TaxCntr00" Type="smallint" Nullable="false" />
+          <Property Name="TaxCntr01" Type="smallint" Nullable="false" />
+          <Property Name="TaxCntr02" Type="smallint" Nullable="false" />
+          <Property Name="TaxCntr03" Type="smallint" Nullable="false" />
+          <Property Name="TaxId00" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="TaxId01" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="TaxId02" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="TaxId03" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="TaxTot00" Type="float" Nullable="false" />
+          <Property Name="TaxTot01" Type="float" Nullable="false" />
+          <Property Name="TaxTot02" Type="float" Nullable="false" />
+          <Property Name="TaxTot03" Type="float" Nullable="false" />
+          <Property Name="Terms" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="TxblTot00" Type="float" Nullable="false" />
+          <Property Name="TxblTot01" Type="float" Nullable="false" />
+          <Property Name="TxblTot02" Type="float" Nullable="false" />
+          <Property Name="TxblTot03" Type="float" Nullable="false" />
+          <Property Name="User1" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="User2" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="User3" Type="float" Nullable="false" />
+          <Property Name="User4" Type="float" Nullable="false" />
+          <Property Name="User5" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="User6" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="User7" Type="smalldatetime" Nullable="false" />
+          <Property Name="User8" Type="smalldatetime" Nullable="false" />
+          <Property Name="VendId" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="VendName" Type="char" MaxLength="60" Nullable="false" />
+          <Property Name="tstamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Apl_Accesos">
+          <Key>
+            <PropertyRef Name="Rol_ID" />
+            <PropertyRef Name="Menu_ID" />
+          </Key>
+          <Property Name="Rol_ID" Type="int" Nullable="false" />
+          <Property Name="Menu_ID" Type="int" Nullable="false" />
+          <Property Name="Estatus_ID" Type="int" Nullable="false" />
+          <Property Name="Habilitado" Type="char" MaxLength="1" />
+          <Property Name="Alta" Type="char" MaxLength="1" />
+          <Property Name="Cambio" Type="char" MaxLength="1" />
+          <Property Name="Eliminar" Type="char" MaxLength="1" />
+          <Property Name="Consultar" Type="char" MaxLength="1" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Ip_Creo" Type="varchar" MaxLength="50" />
+          <Property Name="Equipo_Creo" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Apl_Empresas">
+          <Key>
+            <PropertyRef Name="Empresa_ID" />
+          </Key>
+          <Property Name="Empresa_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Estatus_ID" Type="int" Nullable="false" />
+          <Property Name="Entidad_Empresa_ID" Type="int" Nullable="false" />
+          <Property Name="Clave" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Direccion" Type="varchar" MaxLength="100" />
+          <Property Name="Colonia" Type="varchar" MaxLength="100" />
+          <Property Name="RFC" Type="varchar" MaxLength="20" />
+          <Property Name="CP" Type="varchar" MaxLength="20" />
+          <Property Name="Ciudad" Type="varchar" MaxLength="50" />
+          <Property Name="Estado" Type="varchar" MaxLength="50" />
+          <Property Name="Telefono" Type="varchar" MaxLength="50" />
+          <Property Name="Fax" Type="varchar" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Comentarios" Type="varchar" MaxLength="255" />
+          <Property Name="Ruta_Imagen" Type="image" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Apl_Entidades_Empresas">
+          <Key>
+            <PropertyRef Name="Entidad_Empresa_ID" />
+          </Key>
+          <Property Name="Entidad_Empresa_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Clave" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Apl_Estatus">
+          <Key>
+            <PropertyRef Name="Estatus_ID" />
+          </Key>
+          <Property Name="Estatus_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Estatus" Type="varchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Apl_Menus">
+          <Key>
+            <PropertyRef Name="Menu_ID" />
+          </Key>
+          <Property Name="Menu_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Estatus_ID" Type="int" Nullable="false" />
+          <Property Name="Modulo_ID" Type="int" />
+          <Property Name="Parent_ID" Type="int" />
+          <Property Name="Menu_Descripcion" Type="varchar" MaxLength="200" />
+          <Property Name="URL_LINK" Type="varchar" MaxLength="500" />
+          <Property Name="Nombre_Mostrar" Type="varchar" MaxLength="50" />
+          <Property Name="Orden" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+          <Property Name="Icono" Type="varchar" MaxLength="30" />
+          <Property Name="Visible" Type="bit" />
+          <Property Name="Tipo_Menu" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Apl_Modulos">
+          <Key>
+            <PropertyRef Name="Modulo_ID" />
+          </Key>
+          <Property Name="Modulo_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+          <Property Name="Icono" Type="varchar" MaxLength="30" />
+          <Property Name="Orden" Type="int" />
+        </EntityType>
+        <EntityType Name="Apl_Niveles">
+          <Key>
+            <PropertyRef Name="Nivel_ID" />
+          </Key>
+          <Property Name="Nivel_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Apl_Parametros">
+          <Key>
+            <PropertyRef Name="Parametro_ID" />
+            <PropertyRef Name="Empresa_ID" />
+          </Key>
+          <Property Name="Parametro_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Empresa_ID" Type="int" Nullable="false" />
+          <Property Name="Folio_Inicio" Type="int" />
+        </EntityType>
+        <EntityType Name="Apl_Permisos_Sistemas">
+          <Key>
+            <PropertyRef Name="Permiso_ID" />
+          </Key>
+          <Property Name="Permiso_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre_Permiso" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Apl_Registro_Accesos">
+          <Key>
+            <PropertyRef Name="Empresa_ID" />
+            <PropertyRef Name="Registro_ID" />
+          </Key>
+          <Property Name="Empresa_ID" Type="int" Nullable="false" />
+          <Property Name="Registro_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Usuario_ID" Type="int" Nullable="false" />
+          <Property Name="Tipo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Apl_Rel_Usuarios_Roles">
+          <Key>
+            <PropertyRef Name="Rel_Usuario_Rol_ID" />
+          </Key>
+          <Property Name="Usuario_ID" Type="int" Nullable="false" />
+          <Property Name="Rol_ID" Type="int" Nullable="false" />
+          <Property Name="Empresa_ID" Type="int" Nullable="false" />
+          <Property Name="Sucursal_ID" Type="int" />
+          <Property Name="Rel_Usuario_Rol_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Apl_Roles">
+          <Key>
+            <PropertyRef Name="Rol_ID" />
+            <PropertyRef Name="Empresa_ID" />
+          </Key>
+          <Property Name="Rol_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Empresa_ID" Type="int" Nullable="false" />
+          <Property Name="Nivel_ID" Type="int" Nullable="false" />
+          <Property Name="Estatus_ID" Type="int" Nullable="false" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+          <Property Name="Tipo" Type="varchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Apl_Roles_Sucursales">
+          <Key>
+            <PropertyRef Name="Empresa_ID" />
+            <PropertyRef Name="Sucursal_ID" />
+            <PropertyRef Name="Rol_ID" />
+          </Key>
+          <Property Name="Empresa_ID" Type="int" Nullable="false" />
+          <Property Name="Sucursal_ID" Type="int" Nullable="false" />
+          <Property Name="Rol_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Apl_Usuarios">
+          <Key>
+            <PropertyRef Name="Usuario_ID" />
+          </Key>
+          <Property Name="Empresa_ID" Type="int" Nullable="false" />
+          <Property Name="Usuario_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Estatus_ID" Type="int" Nullable="false" />
+          <Property Name="Area_Id" Type="int" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Usuario" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Apl_Usuarios_Password">
+          <Key>
+            <PropertyRef Name="No_Registro" />
+            <PropertyRef Name="Empresa_ID" />
+            <PropertyRef Name="Usuario_ID" />
+          </Key>
+          <Property Name="No_Registro" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Empresa_ID" Type="int" Nullable="false" />
+          <Property Name="Usuario_ID" Type="int" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Fecha_Password" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Apl_Usuarios_Permisos">
+          <Key>
+            <PropertyRef Name="Usuario_Permiso_ID" />
+          </Key>
+          <Property Name="Usuario_Permiso_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Usuario_ID" Type="int" Nullable="false" />
+          <Property Name="Permiso_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cat_Areas">
+          <Key>
+            <PropertyRef Name="Area_Id" />
+          </Key>
+          <Property Name="Area_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Area" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Estatus" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Color" Type="varchar" MaxLength="6" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Cat_Conceptos">
+          <Key>
+            <PropertyRef Name="Concepto_Id" />
+          </Key>
+          <Property Name="Concepto_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Concepto" Type="varchar" MaxLength="100" />
+          <Property Name="Estatus" Type="varchar" MaxLength="10" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+          <Property Name="Captura_Manual" Type="bit" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Cat_Cuentas">
+          <Key>
+            <PropertyRef Name="Cuenta_Id" />
+          </Key>
+          <Property Name="Cuenta_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cuenta" Type="varchar" MaxLength="100" />
+          <Property Name="Nombre" Type="varchar" MaxLength="255" />
+          <Property Name="Estatus" Type="varchar" MaxLength="10" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Cat_Entidades">
+          <Key>
+            <PropertyRef Name="Entidad_Id" />
+          </Key>
+          <Property Name="Entidad_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Entidad" Type="varchar" MaxLength="100" />
+          <Property Name="Nombre" Type="varchar" MaxLength="255" />
+          <Property Name="Estatus" Type="varchar" MaxLength="10" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Cat_Relacion_Entidad_Cuenta">
+          <Key>
+            <PropertyRef Name="Relacion_Id" />
+          </Key>
+          <Property Name="Relacion_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Cuenta_Id" Type="int" Nullable="false" />
+          <Property Name="Entidad_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Cat_Validaciones">
+          <Key>
+            <PropertyRef Name="Validacion_Id" />
+          </Key>
+          <Property Name="Validacion_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Area_Id" Type="int" Nullable="false" />
+          <Property Name="Validacion" Type="varchar" MaxLength="100" />
+          <Property Name="Estatus" Type="varchar" MaxLength="10" />
+          <Property Name="Orden" Type="int" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+          <Property Name="Concepto_ID" Type="int" />
+        </EntityType>
+        <EntityType Name="Cat_Validaciones_Usuarios">
+          <Key>
+            <PropertyRef Name="Validacion_Usuario_ID" />
+          </Key>
+          <Property Name="Validacion_Usuario_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Validacion_Id" Type="int" Nullable="false" />
+          <Property Name="Usuario_Id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Ope_Anticipos">
+          <Key>
+            <PropertyRef Name="Anticipo_Id" />
+          </Key>
+          <Property Name="Anticipo_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Anticipo" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Saldo" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="Usado" Type="bit" Nullable="false" />
+          <Property Name="Estatus" Type="varchar" MaxLength="10" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Ope_Facturas">
+          <Key>
+            <PropertyRef Name="Factura_Id" />
+          </Key>
+          <Property Name="Factura_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Concepto_Id" Type="int" Nullable="false" />
+          <Property Name="Fecha_Recepcion" Type="datetime" />
+          <Property Name="Fecha_Factura" Type="datetime" />
+          <Property Name="Estatus" Type="varchar" MaxLength="20" />
+          <Property Name="UUID" Type="char" MaxLength="40" />
+          <Property Name="RFC" Type="varchar" MaxLength="13" />
+          <Property Name="Razon_Social" Type="varchar" MaxLength="100" />
+          <Property Name="Folio" Type="varchar" MaxLength="10" />
+          <Property Name="Folio_Cheque" Type="int" />
+          <Property Name="Referencia_Interna" Type="varchar" MaxLength="30" />
+          <Property Name="Referencia" Type="varchar" MaxLength="30" />
+          <Property Name="Pedimento" Type="varchar" MaxLength="50" />
+          <Property Name="Concepto" Type="varchar" MaxLength="255" />
+          <Property Name="Concepto_Xml" Type="varchar" MaxLength="255" />
+          <Property Name="Moneda" Type="varchar" MaxLength="4" />
+          <Property Name="Subtotal" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="IVA" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Retencion" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Total_Pagar" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Fecha_Entrega_Cxp" Type="datetime" />
+          <Property Name="Referencia_Pago" Type="varchar" MaxLength="50" />
+          <Property Name="Fecha_Pago_Proveedor" Type="datetime" />
+          <Property Name="Validacion_Id" Type="int" />
+          <Property Name="Validacion_Rechazada_Id" Type="int" />
+          <Property Name="Motivo" Type="varchar" MaxLength="255" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+          <Property Name="S4Future01" Type="char" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Ope_Facturas_Anexos">
+          <Key>
+            <PropertyRef Name="Anexo_Id" />
+          </Key>
+          <Property Name="Anexo_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Factura_Id" Type="int" Nullable="false" />
+          <Property Name="Url" Type="varchar" MaxLength="255" />
+          <Property Name="Nombre" Type="varchar" MaxLength="100" />
+          <Property Name="Tipo" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Ope_Facturas_Anticipos">
+          <Key>
+            <PropertyRef Name="Anticipo_Factura_Id" />
+          </Key>
+          <Property Name="Anticipo_Factura_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Factura_Id" Type="int" Nullable="false" />
+          <Property Name="Anticipo_Id" Type="int" Nullable="false" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Ope_Facturas_Movimientos">
+          <Key>
+            <PropertyRef Name="Movimiento_Id" />
+          </Key>
+          <Property Name="Movimiento_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Factura_Id" Type="int" Nullable="false" />
+          <Property Name="Accion" Type="varchar" MaxLength="255" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Usuario" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Ope_Facturas_Pagos">
+          <Key>
+            <PropertyRef Name="Pago_Id" />
+          </Key>
+          <Property Name="Pago_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Factura_Id" Type="int" Nullable="false" />
+          <Property Name="Relacion_Id" Type="int" />
+          <Property Name="Monto" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Usuario_Creo" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Creo" Type="datetime" />
+          <Property Name="Usuario_Modifico" Type="varchar" MaxLength="100" />
+          <Property Name="Fecha_Modifico" Type="datetime" />
+        </EntityType>
+        <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'Sistema_Control_Facturas_General_Mills.dbo.XREFileAdmin' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+        <EntityType Name="XREFileAdmin">
+          <Key>
+            <PropertyRef Name="CpnyID" />
+            <PropertyRef Name="Crtd_DateTime" />
+            <PropertyRef Name="Crtd_Prog" />
+            <PropertyRef Name="Crtd_User" />
+            <PropertyRef Name="CuryId" />
+            <PropertyRef Name="DocAmt" />
+            <PropertyRef Name="DocDate" />
+            <PropertyRef Name="DocType" />
+            <PropertyRef Name="FileNameXML" />
+            <PropertyRef Name="Folio" />
+            <PropertyRef Name="FullPath" />
+            <PropertyRef Name="LUpd_DateTime" />
+            <PropertyRef Name="LUpd_Prog" />
+            <PropertyRef Name="LUpd_User" />
+            <PropertyRef Name="NoteId" />
+            <PropertyRef Name="PmtMthdID" />
+            <PropertyRef Name="RefNbr" />
+            <PropertyRef Name="RFC" />
+            <PropertyRef Name="S4Future01" />
+            <PropertyRef Name="S4Future02" />
+            <PropertyRef Name="S4Future03" />
+            <PropertyRef Name="S4Future04" />
+            <PropertyRef Name="S4Future05" />
+            <PropertyRef Name="S4Future06" />
+            <PropertyRef Name="S4Future07" />
+            <PropertyRef Name="S4Future08" />
+            <PropertyRef Name="S4Future09" />
+            <PropertyRef Name="S4Future10" />
+            <PropertyRef Name="S4Future11" />
+            <PropertyRef Name="S4Future12" />
+            <PropertyRef Name="Serie" />
+            <PropertyRef Name="Selected" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="Sub" />
+            <PropertyRef Name="User1" />
+            <PropertyRef Name="User2" />
+            <PropertyRef Name="User3" />
+            <PropertyRef Name="User4" />
+            <PropertyRef Name="User5" />
+            <PropertyRef Name="User6" />
+            <PropertyRef Name="User7" />
+            <PropertyRef Name="User8" />
+            <PropertyRef Name="UUID" />
+            <PropertyRef Name="ValUUIDDate" />
+            <PropertyRef Name="ValUUIDStatus" />
+            <PropertyRef Name="VendId" />
+            <PropertyRef Name="VendName" />
+            <PropertyRef Name="XMLActSinImp" />
+            <PropertyRef Name="XMLConcepto" />
+            <PropertyRef Name="XMLCuryId" />
+            <PropertyRef Name="XMLFormaDePago" />
+            <PropertyRef Name="XMLMetodoPago" />
+            <PropertyRef Name="XMLTaxCodes" />
+            <PropertyRef Name="XMLTerms" />
+            <PropertyRef Name="XMLType" />
+            <PropertyRef Name="tstamp" />
+          </Key>
+          <Property Name="CpnyID" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Crtd_DateTime" Type="smalldatetime" Nullable="false" />
+          <Property Name="Crtd_Prog" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="Crtd_User" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="CuryId" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="DocAmt" Type="float" Nullable="false" />
+          <Property Name="DocDate" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="DocType" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="FileNameXML" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="Folio" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="FullPath" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="LUpd_DateTime" Type="smalldatetime" Nullable="false" />
+          <Property Name="LUpd_Prog" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="LUpd_User" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="NoteId" Type="int" Nullable="false" />
+          <Property Name="PmtMthdID" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="RefNbr" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="RFC" Type="char" MaxLength="13" Nullable="false" />
+          <Property Name="S4Future01" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="S4Future02" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="S4Future03" Type="float" Nullable="false" />
+          <Property Name="S4Future04" Type="float" Nullable="false" />
+          <Property Name="S4Future05" Type="float" Nullable="false" />
+          <Property Name="S4Future06" Type="float" Nullable="false" />
+          <Property Name="S4Future07" Type="smalldatetime" Nullable="false" />
+          <Property Name="S4Future08" Type="smalldatetime" Nullable="false" />
+          <Property Name="S4Future09" Type="int" Nullable="false" />
+          <Property Name="S4Future10" Type="int" Nullable="false" />
+          <Property Name="S4Future11" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="S4Future12" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Serie" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="Selected" Type="smallint" Nullable="false" />
+          <Property Name="Status" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="Sub" Type="char" MaxLength="24" Nullable="false" />
+          <Property Name="User1" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="User2" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="User3" Type="float" Nullable="false" />
+          <Property Name="User4" Type="float" Nullable="false" />
+          <Property Name="User5" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="User6" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="User7" Type="smalldatetime" Nullable="false" />
+          <Property Name="User8" Type="smalldatetime" Nullable="false" />
+          <Property Name="UUID" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="ValUUIDDate" Type="smalldatetime" Nullable="false" />
+          <Property Name="ValUUIDStatus" Type="char" MaxLength="1" Nullable="false" />
+          <Property Name="VendId" Type="char" MaxLength="15" Nullable="false" />
+          <Property Name="VendName" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="XMLActSinImp" Type="float" Nullable="false" />
+          <Property Name="XMLConcepto" Type="char" MaxLength="100" Nullable="false" />
+          <Property Name="XMLCuryId" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="XMLFormaDePago" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="XMLMetodoPago" Type="char" MaxLength="120" Nullable="false" />
+          <Property Name="XMLTaxCodes" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="XMLTerms" Type="char" MaxLength="50" Nullable="false" />
+          <Property Name="XMLType" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="tstamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Apl_Usuarios_Cat_Areas">
+          <End Role="Cat_Areas" Type="Self.Cat_Areas" Multiplicity="0..1" />
+          <End Role="Apl_Usuarios" Type="Self.Apl_Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Areas">
+              <PropertyRef Name="Area_Id" />
+            </Principal>
+            <Dependent Role="Apl_Usuarios">
+              <PropertyRef Name="Area_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cat_Relacion_Entidad_Cuenta_Cat_Cuentas">
+          <End Role="Cat_Cuentas" Type="Self.Cat_Cuentas" Multiplicity="1" />
+          <End Role="Cat_Relacion_Entidad_Cuenta" Type="Self.Cat_Relacion_Entidad_Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Cuentas">
+              <PropertyRef Name="Cuenta_Id" />
+            </Principal>
+            <Dependent Role="Cat_Relacion_Entidad_Cuenta">
+              <PropertyRef Name="Cuenta_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cat_Relacion_Entidad_Cuenta_Cat_Entidades">
+          <End Role="Cat_Entidades" Type="Self.Cat_Entidades" Multiplicity="1" />
+          <End Role="Cat_Relacion_Entidad_Cuenta" Type="Self.Cat_Relacion_Entidad_Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Entidades">
+              <PropertyRef Name="Entidad_Id" />
+            </Principal>
+            <Dependent Role="Cat_Relacion_Entidad_Cuenta">
+              <PropertyRef Name="Entidad_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cat_Validaciones_Cat_Areas">
+          <End Role="Cat_Areas" Type="Self.Cat_Areas" Multiplicity="1" />
+          <End Role="Cat_Validaciones" Type="Self.Cat_Validaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Areas">
+              <PropertyRef Name="Area_Id" />
+            </Principal>
+            <Dependent Role="Cat_Validaciones">
+              <PropertyRef Name="Area_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ConceptoID_Validaciones_Conceptos">
+          <End Role="Cat_Conceptos" Type="Self.Cat_Conceptos" Multiplicity="0..1" />
+          <End Role="Cat_Validaciones" Type="Self.Cat_Validaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Conceptos">
+              <PropertyRef Name="Concepto_Id" />
+            </Principal>
+            <Dependent Role="Cat_Validaciones">
+              <PropertyRef Name="Concepto_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Anexos_Ope_Facturas">
+          <End Role="Ope_Facturas" Type="Self.Ope_Facturas" Multiplicity="1" />
+          <End Role="Ope_Facturas_Anexos" Type="Self.Ope_Facturas_Anexos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ope_Facturas">
+              <PropertyRef Name="Factura_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas_Anexos">
+              <PropertyRef Name="Factura_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Anticipos_Ope_Facturas">
+          <End Role="Ope_Facturas" Type="Self.Ope_Facturas" Multiplicity="1" />
+          <End Role="Ope_Facturas_Anticipos" Type="Self.Ope_Facturas_Anticipos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ope_Facturas">
+              <PropertyRef Name="Factura_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas_Anticipos">
+              <PropertyRef Name="Factura_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Cat_Conceptos">
+          <End Role="Cat_Conceptos" Type="Self.Cat_Conceptos" Multiplicity="1" />
+          <End Role="Ope_Facturas" Type="Self.Ope_Facturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Conceptos">
+              <PropertyRef Name="Concepto_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas">
+              <PropertyRef Name="Concepto_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Cat_Validaciones">
+          <End Role="Cat_Validaciones" Type="Self.Cat_Validaciones" Multiplicity="0..1" />
+          <End Role="Ope_Facturas" Type="Self.Ope_Facturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Validaciones">
+              <PropertyRef Name="Validacion_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas">
+              <PropertyRef Name="Validacion_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Cat_Validaciones1">
+          <End Role="Cat_Validaciones" Type="Self.Cat_Validaciones" Multiplicity="0..1" />
+          <End Role="Ope_Facturas" Type="Self.Ope_Facturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Validaciones">
+              <PropertyRef Name="Validacion_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas">
+              <PropertyRef Name="Validacion_Rechazada_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Movimientos_Ope_Facturas">
+          <End Role="Ope_Facturas" Type="Self.Ope_Facturas" Multiplicity="1" />
+          <End Role="Ope_Facturas_Movimientos" Type="Self.Ope_Facturas_Movimientos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ope_Facturas">
+              <PropertyRef Name="Factura_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas_Movimientos">
+              <PropertyRef Name="Factura_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Pagos_Cat_Relacion_Entidad_Cuenta">
+          <End Role="Cat_Relacion_Entidad_Cuenta" Type="Self.Cat_Relacion_Entidad_Cuenta" Multiplicity="0..1" />
+          <End Role="Ope_Facturas_Pagos" Type="Self.Ope_Facturas_Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Relacion_Entidad_Cuenta">
+              <PropertyRef Name="Relacion_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas_Pagos">
+              <PropertyRef Name="Relacion_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Pagos_Ope_Facturas">
+          <End Role="Ope_Facturas" Type="Self.Ope_Facturas" Multiplicity="1" />
+          <End Role="Ope_Facturas_Pagos" Type="Self.Ope_Facturas_Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ope_Facturas">
+              <PropertyRef Name="Factura_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas_Pagos">
+              <PropertyRef Name="Factura_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_UsuarioID_ValidacionesUsuarios_Users">
+          <End Role="Apl_Usuarios" Type="Self.Apl_Usuarios" Multiplicity="1" />
+          <End Role="Cat_Validaciones_Usuarios" Type="Self.Cat_Validaciones_Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apl_Usuarios">
+              <PropertyRef Name="Usuario_ID" />
+            </Principal>
+            <Dependent Role="Cat_Validaciones_Usuarios">
+              <PropertyRef Name="Usuario_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioPermisoIDPermisos">
+          <End Role="Apl_Permisos_Sistemas" Type="Self.Apl_Permisos_Sistemas" Multiplicity="1" />
+          <End Role="Apl_Usuarios_Permisos" Type="Self.Apl_Usuarios_Permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apl_Permisos_Sistemas">
+              <PropertyRef Name="Permiso_ID" />
+            </Principal>
+            <Dependent Role="Apl_Usuarios_Permisos">
+              <PropertyRef Name="Permiso_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioPermisoIDUsuarios">
+          <End Role="Apl_Usuarios" Type="Self.Apl_Usuarios" Multiplicity="1" />
+          <End Role="Apl_Usuarios_Permisos" Type="Self.Apl_Usuarios_Permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apl_Usuarios">
+              <PropertyRef Name="Usuario_ID" />
+            </Principal>
+            <Dependent Role="Apl_Usuarios_Permisos">
+              <PropertyRef Name="Usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ValidacionID_ValidacionesUsuarios_Validaciones">
+          <End Role="Cat_Validaciones" Type="Self.Cat_Validaciones" Multiplicity="1" />
+          <End Role="Cat_Validaciones_Usuarios" Type="Self.Cat_Validaciones_Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Validaciones">
+              <PropertyRef Name="Validacion_Id" />
+            </Principal>
+            <Dependent Role="Cat_Validaciones_Usuarios">
+              <PropertyRef Name="Validacion_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Entity_Control_FacturasStoreContainer">
+          <EntitySet Name="APDoc" EntityType="Self.APDoc" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Accesos" EntityType="Self.Apl_Accesos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Empresas" EntityType="Self.Apl_Empresas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Entidades_Empresas" EntityType="Self.Apl_Entidades_Empresas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Estatus" EntityType="Self.Apl_Estatus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Menus" EntityType="Self.Apl_Menus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Modulos" EntityType="Self.Apl_Modulos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Niveles" EntityType="Self.Apl_Niveles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Parametros" EntityType="Self.Apl_Parametros" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Permisos_Sistemas" EntityType="Self.Apl_Permisos_Sistemas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Registro_Accesos" EntityType="Self.Apl_Registro_Accesos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Rel_Usuarios_Roles" EntityType="Self.Apl_Rel_Usuarios_Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Roles" EntityType="Self.Apl_Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Roles_Sucursales" EntityType="Self.Apl_Roles_Sucursales" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Usuarios" EntityType="Self.Apl_Usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Usuarios_Password" EntityType="Self.Apl_Usuarios_Password" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Apl_Usuarios_Permisos" EntityType="Self.Apl_Usuarios_Permisos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cat_Areas" EntityType="Self.Cat_Areas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cat_Conceptos" EntityType="Self.Cat_Conceptos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cat_Cuentas" EntityType="Self.Cat_Cuentas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cat_Entidades" EntityType="Self.Cat_Entidades" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cat_Relacion_Entidad_Cuenta" EntityType="Self.Cat_Relacion_Entidad_Cuenta" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cat_Validaciones" EntityType="Self.Cat_Validaciones" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Cat_Validaciones_Usuarios" EntityType="Self.Cat_Validaciones_Usuarios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ope_Anticipos" EntityType="Self.Ope_Anticipos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ope_Facturas" EntityType="Self.Ope_Facturas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ope_Facturas_Anexos" EntityType="Self.Ope_Facturas_Anexos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ope_Facturas_Anticipos" EntityType="Self.Ope_Facturas_Anticipos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ope_Facturas_Movimientos" EntityType="Self.Ope_Facturas_Movimientos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Ope_Facturas_Pagos" EntityType="Self.Ope_Facturas_Pagos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="XREFileAdmin" EntityType="Self.XREFileAdmin" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [XREFileAdmin].[CpnyID] AS [CpnyID], 
+    [XREFileAdmin].[Crtd_DateTime] AS [Crtd_DateTime], 
+    [XREFileAdmin].[Crtd_Prog] AS [Crtd_Prog], 
+    [XREFileAdmin].[Crtd_User] AS [Crtd_User], 
+    [XREFileAdmin].[CuryId] AS [CuryId], 
+    [XREFileAdmin].[DocAmt] AS [DocAmt], 
+    [XREFileAdmin].[DocDate] AS [DocDate], 
+    [XREFileAdmin].[DocType] AS [DocType], 
+    [XREFileAdmin].[FileNameXML] AS [FileNameXML], 
+    [XREFileAdmin].[Folio] AS [Folio], 
+    [XREFileAdmin].[FullPath] AS [FullPath], 
+    [XREFileAdmin].[LUpd_DateTime] AS [LUpd_DateTime], 
+    [XREFileAdmin].[LUpd_Prog] AS [LUpd_Prog], 
+    [XREFileAdmin].[LUpd_User] AS [LUpd_User], 
+    [XREFileAdmin].[NoteId] AS [NoteId], 
+    [XREFileAdmin].[PmtMthdID] AS [PmtMthdID], 
+    [XREFileAdmin].[RefNbr] AS [RefNbr], 
+    [XREFileAdmin].[RFC] AS [RFC], 
+    [XREFileAdmin].[S4Future01] AS [S4Future01], 
+    [XREFileAdmin].[S4Future02] AS [S4Future02], 
+    [XREFileAdmin].[S4Future03] AS [S4Future03], 
+    [XREFileAdmin].[S4Future04] AS [S4Future04], 
+    [XREFileAdmin].[S4Future05] AS [S4Future05], 
+    [XREFileAdmin].[S4Future06] AS [S4Future06], 
+    [XREFileAdmin].[S4Future07] AS [S4Future07], 
+    [XREFileAdmin].[S4Future08] AS [S4Future08], 
+    [XREFileAdmin].[S4Future09] AS [S4Future09], 
+    [XREFileAdmin].[S4Future10] AS [S4Future10], 
+    [XREFileAdmin].[S4Future11] AS [S4Future11], 
+    [XREFileAdmin].[S4Future12] AS [S4Future12], 
+    [XREFileAdmin].[Serie] AS [Serie], 
+    [XREFileAdmin].[Selected] AS [Selected], 
+    [XREFileAdmin].[Status] AS [Status], 
+    [XREFileAdmin].[Sub] AS [Sub], 
+    [XREFileAdmin].[User1] AS [User1], 
+    [XREFileAdmin].[User2] AS [User2], 
+    [XREFileAdmin].[User3] AS [User3], 
+    [XREFileAdmin].[User4] AS [User4], 
+    [XREFileAdmin].[User5] AS [User5], 
+    [XREFileAdmin].[User6] AS [User6], 
+    [XREFileAdmin].[User7] AS [User7], 
+    [XREFileAdmin].[User8] AS [User8], 
+    [XREFileAdmin].[UUID] AS [UUID], 
+    [XREFileAdmin].[ValUUIDDate] AS [ValUUIDDate], 
+    [XREFileAdmin].[ValUUIDStatus] AS [ValUUIDStatus], 
+    [XREFileAdmin].[VendId] AS [VendId], 
+    [XREFileAdmin].[VendName] AS [VendName], 
+    [XREFileAdmin].[XMLActSinImp] AS [XMLActSinImp], 
+    [XREFileAdmin].[XMLConcepto] AS [XMLConcepto], 
+    [XREFileAdmin].[XMLCuryId] AS [XMLCuryId], 
+    [XREFileAdmin].[XMLFormaDePago] AS [XMLFormaDePago], 
+    [XREFileAdmin].[XMLMetodoPago] AS [XMLMetodoPago], 
+    [XREFileAdmin].[XMLTaxCodes] AS [XMLTaxCodes], 
+    [XREFileAdmin].[XMLTerms] AS [XMLTerms], 
+    [XREFileAdmin].[XMLType] AS [XMLType], 
+    [XREFileAdmin].[tstamp] AS [tstamp]
+    FROM [dbo].[XREFileAdmin] AS [XREFileAdmin]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_Apl_Usuarios_Cat_Areas" Association="Self.FK_Apl_Usuarios_Cat_Areas">
+            <End Role="Cat_Areas" EntitySet="Cat_Areas" />
+            <End Role="Apl_Usuarios" EntitySet="Apl_Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cat_Relacion_Entidad_Cuenta_Cat_Cuentas" Association="Self.FK_Cat_Relacion_Entidad_Cuenta_Cat_Cuentas">
+            <End Role="Cat_Cuentas" EntitySet="Cat_Cuentas" />
+            <End Role="Cat_Relacion_Entidad_Cuenta" EntitySet="Cat_Relacion_Entidad_Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cat_Relacion_Entidad_Cuenta_Cat_Entidades" Association="Self.FK_Cat_Relacion_Entidad_Cuenta_Cat_Entidades">
+            <End Role="Cat_Entidades" EntitySet="Cat_Entidades" />
+            <End Role="Cat_Relacion_Entidad_Cuenta" EntitySet="Cat_Relacion_Entidad_Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cat_Validaciones_Cat_Areas" Association="Self.FK_Cat_Validaciones_Cat_Areas">
+            <End Role="Cat_Areas" EntitySet="Cat_Areas" />
+            <End Role="Cat_Validaciones" EntitySet="Cat_Validaciones" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ConceptoID_Validaciones_Conceptos" Association="Self.Fk_ConceptoID_Validaciones_Conceptos">
+            <End Role="Cat_Conceptos" EntitySet="Cat_Conceptos" />
+            <End Role="Cat_Validaciones" EntitySet="Cat_Validaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Anexos_Ope_Facturas" Association="Self.FK_Ope_Facturas_Anexos_Ope_Facturas">
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+            <End Role="Ope_Facturas_Anexos" EntitySet="Ope_Facturas_Anexos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Anticipos_Ope_Facturas" Association="Self.FK_Ope_Facturas_Anticipos_Ope_Facturas">
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+            <End Role="Ope_Facturas_Anticipos" EntitySet="Ope_Facturas_Anticipos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Cat_Conceptos" Association="Self.FK_Ope_Facturas_Cat_Conceptos">
+            <End Role="Cat_Conceptos" EntitySet="Cat_Conceptos" />
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Cat_Validaciones" Association="Self.FK_Ope_Facturas_Cat_Validaciones">
+            <End Role="Cat_Validaciones" EntitySet="Cat_Validaciones" />
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Cat_Validaciones1" Association="Self.FK_Ope_Facturas_Cat_Validaciones1">
+            <End Role="Cat_Validaciones" EntitySet="Cat_Validaciones" />
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Movimientos_Ope_Facturas" Association="Self.FK_Ope_Facturas_Movimientos_Ope_Facturas">
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+            <End Role="Ope_Facturas_Movimientos" EntitySet="Ope_Facturas_Movimientos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Pagos_Cat_Relacion_Entidad_Cuenta" Association="Self.FK_Ope_Facturas_Pagos_Cat_Relacion_Entidad_Cuenta">
+            <End Role="Cat_Relacion_Entidad_Cuenta" EntitySet="Cat_Relacion_Entidad_Cuenta" />
+            <End Role="Ope_Facturas_Pagos" EntitySet="Ope_Facturas_Pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Pagos_Ope_Facturas" Association="Self.FK_Ope_Facturas_Pagos_Ope_Facturas">
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+            <End Role="Ope_Facturas_Pagos" EntitySet="Ope_Facturas_Pagos" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_UsuarioID_ValidacionesUsuarios_Users" Association="Self.Fk_UsuarioID_ValidacionesUsuarios_Users">
+            <End Role="Apl_Usuarios" EntitySet="Apl_Usuarios" />
+            <End Role="Cat_Validaciones_Usuarios" EntitySet="Cat_Validaciones_Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioPermisoIDPermisos" Association="Self.FK_UsuarioPermisoIDPermisos">
+            <End Role="Apl_Permisos_Sistemas" EntitySet="Apl_Permisos_Sistemas" />
+            <End Role="Apl_Usuarios_Permisos" EntitySet="Apl_Usuarios_Permisos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioPermisoIDUsuarios" Association="Self.FK_UsuarioPermisoIDUsuarios">
+            <End Role="Apl_Usuarios" EntitySet="Apl_Usuarios" />
+            <End Role="Apl_Usuarios_Permisos" EntitySet="Apl_Usuarios_Permisos" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ValidacionID_ValidacionesUsuarios_Validaciones" Association="Self.Fk_ValidacionID_ValidacionesUsuarios_Validaciones">
+            <End Role="Cat_Validaciones" EntitySet="Cat_Validaciones" />
+            <End Role="Cat_Validaciones_Usuarios" EntitySet="Cat_Validaciones_Usuarios" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Entity_Control_Facturas" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="Entity_CF" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="APDoc" EntityType="Entity_Control_Facturas.APDoc" />
+          <EntitySet Name="Apl_Accesos" EntityType="Entity_Control_Facturas.Apl_Accesos" />
+          <EntitySet Name="Apl_Empresas" EntityType="Entity_Control_Facturas.Apl_Empresas" />
+          <EntitySet Name="Apl_Entidades_Empresas" EntityType="Entity_Control_Facturas.Apl_Entidades_Empresas" />
+          <EntitySet Name="Apl_Estatus" EntityType="Entity_Control_Facturas.Apl_Estatus" />
+          <EntitySet Name="Apl_Menus" EntityType="Entity_Control_Facturas.Apl_Menus" />
+          <EntitySet Name="Apl_Modulos" EntityType="Entity_Control_Facturas.Apl_Modulos" />
+          <EntitySet Name="Apl_Niveles" EntityType="Entity_Control_Facturas.Apl_Niveles" />
+          <EntitySet Name="Apl_Parametros" EntityType="Entity_Control_Facturas.Apl_Parametros" />
+          <EntitySet Name="Apl_Permisos_Sistemas" EntityType="Entity_Control_Facturas.Apl_Permisos_Sistemas" />
+          <EntitySet Name="Apl_Registro_Accesos" EntityType="Entity_Control_Facturas.Apl_Registro_Accesos" />
+          <EntitySet Name="Apl_Rel_Usuarios_Roles" EntityType="Entity_Control_Facturas.Apl_Rel_Usuarios_Roles" />
+          <EntitySet Name="Apl_Roles" EntityType="Entity_Control_Facturas.Apl_Roles" />
+          <EntitySet Name="Apl_Roles_Sucursales" EntityType="Entity_Control_Facturas.Apl_Roles_Sucursales" />
+          <EntitySet Name="Apl_Usuarios" EntityType="Entity_Control_Facturas.Apl_Usuarios" />
+          <EntitySet Name="Apl_Usuarios_Password" EntityType="Entity_Control_Facturas.Apl_Usuarios_Password" />
+          <EntitySet Name="Apl_Usuarios_Permisos" EntityType="Entity_Control_Facturas.Apl_Usuarios_Permisos" />
+          <EntitySet Name="Cat_Areas" EntityType="Entity_Control_Facturas.Cat_Areas" />
+          <EntitySet Name="Cat_Conceptos" EntityType="Entity_Control_Facturas.Cat_Conceptos" />
+          <EntitySet Name="Cat_Cuentas" EntityType="Entity_Control_Facturas.Cat_Cuentas" />
+          <EntitySet Name="Cat_Entidades" EntityType="Entity_Control_Facturas.Cat_Entidades" />
+          <EntitySet Name="Cat_Relacion_Entidad_Cuenta" EntityType="Entity_Control_Facturas.Cat_Relacion_Entidad_Cuenta" />
+          <EntitySet Name="Cat_Validaciones" EntityType="Entity_Control_Facturas.Cat_Validaciones" />
+          <EntitySet Name="Cat_Validaciones_Usuarios" EntityType="Entity_Control_Facturas.Cat_Validaciones_Usuarios" />
+          <EntitySet Name="Ope_Anticipos" EntityType="Entity_Control_Facturas.Ope_Anticipos" />
+          <EntitySet Name="Ope_Facturas" EntityType="Entity_Control_Facturas.Ope_Facturas" />
+          <EntitySet Name="Ope_Facturas_Anexos" EntityType="Entity_Control_Facturas.Ope_Facturas_Anexos" />
+          <EntitySet Name="Ope_Facturas_Anticipos" EntityType="Entity_Control_Facturas.Ope_Facturas_Anticipos" />
+          <EntitySet Name="Ope_Facturas_Movimientos" EntityType="Entity_Control_Facturas.Ope_Facturas_Movimientos" />
+          <EntitySet Name="Ope_Facturas_Pagos" EntityType="Entity_Control_Facturas.Ope_Facturas_Pagos" />
+          <EntitySet Name="XREFileAdmin" EntityType="Entity_Control_Facturas.XREFileAdmin" />
+          <AssociationSet Name="FK_UsuarioPermisoIDPermisos" Association="Entity_Control_Facturas.FK_UsuarioPermisoIDPermisos">
+            <End Role="Apl_Permisos_Sistemas" EntitySet="Apl_Permisos_Sistemas" />
+            <End Role="Apl_Usuarios_Permisos" EntitySet="Apl_Usuarios_Permisos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Apl_Usuarios_Cat_Areas" Association="Entity_Control_Facturas.FK_Apl_Usuarios_Cat_Areas">
+            <End Role="Cat_Areas" EntitySet="Cat_Areas" />
+            <End Role="Apl_Usuarios" EntitySet="Apl_Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_UsuarioID_ValidacionesUsuarios_Users" Association="Entity_Control_Facturas.Fk_UsuarioID_ValidacionesUsuarios_Users">
+            <End Role="Apl_Usuarios" EntitySet="Apl_Usuarios" />
+            <End Role="Cat_Validaciones_Usuarios" EntitySet="Cat_Validaciones_Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UsuarioPermisoIDUsuarios" Association="Entity_Control_Facturas.FK_UsuarioPermisoIDUsuarios">
+            <End Role="Apl_Usuarios" EntitySet="Apl_Usuarios" />
+            <End Role="Apl_Usuarios_Permisos" EntitySet="Apl_Usuarios_Permisos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cat_Validaciones_Cat_Areas" Association="Entity_Control_Facturas.FK_Cat_Validaciones_Cat_Areas">
+            <End Role="Cat_Areas" EntitySet="Cat_Areas" />
+            <End Role="Cat_Validaciones" EntitySet="Cat_Validaciones" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ConceptoID_Validaciones_Conceptos" Association="Entity_Control_Facturas.Fk_ConceptoID_Validaciones_Conceptos">
+            <End Role="Cat_Conceptos" EntitySet="Cat_Conceptos" />
+            <End Role="Cat_Validaciones" EntitySet="Cat_Validaciones" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Cat_Conceptos" Association="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Conceptos">
+            <End Role="Cat_Conceptos" EntitySet="Cat_Conceptos" />
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cat_Relacion_Entidad_Cuenta_Cat_Cuentas" Association="Entity_Control_Facturas.FK_Cat_Relacion_Entidad_Cuenta_Cat_Cuentas">
+            <End Role="Cat_Cuentas" EntitySet="Cat_Cuentas" />
+            <End Role="Cat_Relacion_Entidad_Cuenta" EntitySet="Cat_Relacion_Entidad_Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Cat_Relacion_Entidad_Cuenta_Cat_Entidades" Association="Entity_Control_Facturas.FK_Cat_Relacion_Entidad_Cuenta_Cat_Entidades">
+            <End Role="Cat_Entidades" EntitySet="Cat_Entidades" />
+            <End Role="Cat_Relacion_Entidad_Cuenta" EntitySet="Cat_Relacion_Entidad_Cuenta" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Pagos_Cat_Relacion_Entidad_Cuenta" Association="Entity_Control_Facturas.FK_Ope_Facturas_Pagos_Cat_Relacion_Entidad_Cuenta">
+            <End Role="Cat_Relacion_Entidad_Cuenta" EntitySet="Cat_Relacion_Entidad_Cuenta" />
+            <End Role="Ope_Facturas_Pagos" EntitySet="Ope_Facturas_Pagos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Cat_Validaciones" Association="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Validaciones">
+            <End Role="Cat_Validaciones" EntitySet="Cat_Validaciones" />
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Cat_Validaciones1" Association="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Validaciones1">
+            <End Role="Cat_Validaciones" EntitySet="Cat_Validaciones" />
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ValidacionID_ValidacionesUsuarios_Validaciones" Association="Entity_Control_Facturas.Fk_ValidacionID_ValidacionesUsuarios_Validaciones">
+            <End Role="Cat_Validaciones" EntitySet="Cat_Validaciones" />
+            <End Role="Cat_Validaciones_Usuarios" EntitySet="Cat_Validaciones_Usuarios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Anexos_Ope_Facturas" Association="Entity_Control_Facturas.FK_Ope_Facturas_Anexos_Ope_Facturas">
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+            <End Role="Ope_Facturas_Anexos" EntitySet="Ope_Facturas_Anexos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Anticipos_Ope_Facturas" Association="Entity_Control_Facturas.FK_Ope_Facturas_Anticipos_Ope_Facturas">
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+            <End Role="Ope_Facturas_Anticipos" EntitySet="Ope_Facturas_Anticipos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Movimientos_Ope_Facturas" Association="Entity_Control_Facturas.FK_Ope_Facturas_Movimientos_Ope_Facturas">
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+            <End Role="Ope_Facturas_Movimientos" EntitySet="Ope_Facturas_Movimientos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Ope_Facturas_Pagos_Ope_Facturas" Association="Entity_Control_Facturas.FK_Ope_Facturas_Pagos_Ope_Facturas">
+            <End Role="Ope_Facturas" EntitySet="Ope_Facturas" />
+            <End Role="Ope_Facturas_Pagos" EntitySet="Ope_Facturas_Pagos" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="APDoc">
+          <Key>
+            <PropertyRef Name="Acct" />
+            <PropertyRef Name="DocType" />
+            <PropertyRef Name="RecordID" />
+            <PropertyRef Name="RefNbr" />
+            <PropertyRef Name="Sub" />
+          </Key>
+          <Property Name="Acct" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="AddlCost" Type="Int16" Nullable="false" />
+          <Property Name="ApplyAmt" Type="Double" Nullable="false" />
+          <Property Name="ApplyDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ApplyRefNbr" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="BatNbr" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="BatSeq" Type="Int32" Nullable="false" />
+          <Property Name="BWAmt" Type="Double" Nullable="false" />
+          <Property Name="CashAcct" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CashSub" Type="String" Nullable="false" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="ClearAmt" Type="Double" Nullable="false" />
+          <Property Name="ClearDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CodeType" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="CpnyID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Crtd_DateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Crtd_Prog" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="Crtd_User" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CurrentNbr" Type="Int16" Nullable="false" />
+          <Property Name="CuryBWAmt" Type="Double" Nullable="false" />
+          <Property Name="CuryDiscBal" Type="Double" Nullable="false" />
+          <Property Name="CuryDiscTkn" Type="Double" Nullable="false" />
+          <Property Name="CuryDocBal" Type="Double" Nullable="false" />
+          <Property Name="CuryEffDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="CuryId" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="CuryMultDiv" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="CuryOrigDocAmt" Type="Double" Nullable="false" />
+          <Property Name="CuryPmtAmt" Type="Double" Nullable="false" />
+          <Property Name="CuryRate" Type="Double" Nullable="false" />
+          <Property Name="CuryRateType" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="CuryTaxTot00" Type="Double" Nullable="false" />
+          <Property Name="CuryTaxTot01" Type="Double" Nullable="false" />
+          <Property Name="CuryTaxTot02" Type="Double" Nullable="false" />
+          <Property Name="CuryTaxTot03" Type="Double" Nullable="false" />
+          <Property Name="CuryTxblTot00" Type="Double" Nullable="false" />
+          <Property Name="CuryTxblTot01" Type="Double" Nullable="false" />
+          <Property Name="CuryTxblTot02" Type="Double" Nullable="false" />
+          <Property Name="CuryTxblTot03" Type="Double" Nullable="false" />
+          <Property Name="Cycle" Type="Int16" Nullable="false" />
+          <Property Name="DfltDetail" Type="Int16" Nullable="false" />
+          <Property Name="DirectDeposit" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DiscBal" Type="Double" Nullable="false" />
+          <Property Name="DiscDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DiscTkn" Type="Double" Nullable="false" />
+          <Property Name="Doc1099" Type="Int16" Nullable="false" />
+          <Property Name="DocBal" Type="Double" Nullable="false" />
+          <Property Name="DocClass" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="DocDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="DocDesc" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="DocType" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="DueDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Econfirm" Type="String" Nullable="false" MaxLength="18" FixedLength="true" Unicode="false" />
+          <Property Name="Estatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ExcludeFreight" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="FreightAmt" Type="Double" Nullable="false" />
+          <Property Name="InstallNbr" Type="Int16" Nullable="false" />
+          <Property Name="InvcDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="InvcNbr" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="LCCode" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="LineCntr" Type="Int32" Nullable="false" />
+          <Property Name="LUpd_DateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LUpd_Prog" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="LUpd_User" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MasterDocNbr" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="NbrCycle" Type="Int16" Nullable="false" />
+          <Property Name="NoteID" Type="Int32" Nullable="false" />
+          <Property Name="OpenDoc" Type="Int16" Nullable="false" />
+          <Property Name="OrigDocAmt" Type="Double" Nullable="false" />
+          <Property Name="PayDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="PayHoldDesc" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="PC_Status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PerClosed" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="PerEnt" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="PerPost" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="PmtAmt" Type="Double" Nullable="false" />
+          <Property Name="PmtID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PmtMethod" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="PONbr" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PrePay_RefNbr" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ProjectID" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="RecordID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RefNbr" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Retention" Type="Int16" Nullable="false" />
+          <Property Name="RGOLAmt" Type="Double" Nullable="false" />
+          <Property Name="Rlsed" Type="Int16" Nullable="false" />
+          <Property Name="S4Future01" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="S4Future02" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="S4Future03" Type="Double" Nullable="false" />
+          <Property Name="S4Future04" Type="Double" Nullable="false" />
+          <Property Name="S4Future05" Type="Double" Nullable="false" />
+          <Property Name="S4Future06" Type="Double" Nullable="false" />
+          <Property Name="S4Future07" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="S4Future08" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="S4Future09" Type="Int32" Nullable="false" />
+          <Property Name="S4Future10" Type="Int32" Nullable="false" />
+          <Property Name="S4Future11" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="S4Future12" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Selected" Type="Int16" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Sub" Type="String" Nullable="false" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="Subcontract" Type="String" Nullable="false" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="TaxCntr00" Type="Int16" Nullable="false" />
+          <Property Name="TaxCntr01" Type="Int16" Nullable="false" />
+          <Property Name="TaxCntr02" Type="Int16" Nullable="false" />
+          <Property Name="TaxCntr03" Type="Int16" Nullable="false" />
+          <Property Name="TaxId00" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TaxId01" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TaxId02" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TaxId03" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="TaxTot00" Type="Double" Nullable="false" />
+          <Property Name="TaxTot01" Type="Double" Nullable="false" />
+          <Property Name="TaxTot02" Type="Double" Nullable="false" />
+          <Property Name="TaxTot03" Type="Double" Nullable="false" />
+          <Property Name="Terms" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="TxblTot00" Type="Double" Nullable="false" />
+          <Property Name="TxblTot01" Type="Double" Nullable="false" />
+          <Property Name="TxblTot02" Type="Double" Nullable="false" />
+          <Property Name="TxblTot03" Type="Double" Nullable="false" />
+          <Property Name="User1" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="User2" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="User3" Type="Double" Nullable="false" />
+          <Property Name="User4" Type="Double" Nullable="false" />
+          <Property Name="User5" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="User6" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="User7" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="User8" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="VendId" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="VendName" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" />
+          <Property Name="tstamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityType Name="Apl_Accesos">
+          <Key>
+            <PropertyRef Name="Rol_ID" />
+            <PropertyRef Name="Menu_ID" />
+          </Key>
+          <Property Name="Rol_ID" Type="Int32" Nullable="false" />
+          <Property Name="Menu_ID" Type="Int32" Nullable="false" />
+          <Property Name="Estatus_ID" Type="Int32" Nullable="false" />
+          <Property Name="Habilitado" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Alta" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Cambio" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Eliminar" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Consultar" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Ip_Creo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Equipo_Creo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Apl_Empresas">
+          <Key>
+            <PropertyRef Name="Empresa_ID" />
+          </Key>
+          <Property Name="Empresa_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Estatus_ID" Type="Int32" Nullable="false" />
+          <Property Name="Entidad_Empresa_ID" Type="Int32" Nullable="false" />
+          <Property Name="Clave" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Direccion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Colonia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="RFC" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="CP" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Ciudad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Estado" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Comentarios" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Ruta_Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Apl_Entidades_Empresas">
+          <Key>
+            <PropertyRef Name="Entidad_Empresa_ID" />
+          </Key>
+          <Property Name="Entidad_Empresa_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Clave" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Apl_Estatus">
+          <Key>
+            <PropertyRef Name="Estatus_ID" />
+          </Key>
+          <Property Name="Estatus_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Estatus" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Apl_Menus">
+          <Key>
+            <PropertyRef Name="Menu_ID" />
+          </Key>
+          <Property Name="Menu_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Estatus_ID" Type="Int32" Nullable="false" />
+          <Property Name="Modulo_ID" Type="Int32" />
+          <Property Name="Parent_ID" Type="Int32" />
+          <Property Name="Menu_Descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="URL_LINK" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre_Mostrar" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <Property Name="Icono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Visible" Type="Boolean" />
+          <Property Name="Tipo_Menu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Apl_Modulos">
+          <Key>
+            <PropertyRef Name="Modulo_ID" />
+          </Key>
+          <Property Name="Modulo_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <Property Name="Icono" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Apl_Niveles">
+          <Key>
+            <PropertyRef Name="Nivel_ID" />
+          </Key>
+          <Property Name="Nivel_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Apl_Parametros">
+          <Key>
+            <PropertyRef Name="Parametro_ID" />
+            <PropertyRef Name="Empresa_ID" />
+          </Key>
+          <Property Name="Parametro_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Empresa_ID" Type="Int32" Nullable="false" />
+          <Property Name="Folio_Inicio" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Apl_Permisos_Sistemas">
+          <Key>
+            <PropertyRef Name="Permiso_ID" />
+          </Key>
+          <Property Name="Permiso_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre_Permiso" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Apl_Usuarios_Permisos" Relationship="Entity_Control_Facturas.FK_UsuarioPermisoIDPermisos" FromRole="Apl_Permisos_Sistemas" ToRole="Apl_Usuarios_Permisos" />
+        </EntityType>
+        <EntityType Name="Apl_Registro_Accesos">
+          <Key>
+            <PropertyRef Name="Empresa_ID" />
+            <PropertyRef Name="Registro_ID" />
+          </Key>
+          <Property Name="Empresa_ID" Type="Int32" Nullable="false" />
+          <Property Name="Registro_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Usuario_ID" Type="Int32" Nullable="false" />
+          <Property Name="Tipo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Apl_Rel_Usuarios_Roles">
+          <Key>
+            <PropertyRef Name="Rel_Usuario_Rol_ID" />
+          </Key>
+          <Property Name="Usuario_ID" Type="Int32" Nullable="false" />
+          <Property Name="Rol_ID" Type="Int32" Nullable="false" />
+          <Property Name="Empresa_ID" Type="Int32" Nullable="false" />
+          <Property Name="Sucursal_ID" Type="Int32" />
+          <Property Name="Rel_Usuario_Rol_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Apl_Roles">
+          <Key>
+            <PropertyRef Name="Rol_ID" />
+            <PropertyRef Name="Empresa_ID" />
+          </Key>
+          <Property Name="Rol_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Empresa_ID" Type="Int32" Nullable="false" />
+          <Property Name="Nivel_ID" Type="Int32" Nullable="false" />
+          <Property Name="Estatus_ID" Type="Int32" Nullable="false" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <Property Name="Tipo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Apl_Roles_Sucursales">
+          <Key>
+            <PropertyRef Name="Empresa_ID" />
+            <PropertyRef Name="Sucursal_ID" />
+            <PropertyRef Name="Rol_ID" />
+          </Key>
+          <Property Name="Empresa_ID" Type="Int32" Nullable="false" />
+          <Property Name="Sucursal_ID" Type="Int32" Nullable="false" />
+          <Property Name="Rol_ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Apl_Usuarios">
+          <Key>
+            <PropertyRef Name="Usuario_ID" />
+          </Key>
+          <Property Name="Empresa_ID" Type="Int32" Nullable="false" />
+          <Property Name="Usuario_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Estatus_ID" Type="Int32" Nullable="false" />
+          <Property Name="Area_Id" Type="Int32" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Cat_Areas" Relationship="Entity_Control_Facturas.FK_Apl_Usuarios_Cat_Areas" FromRole="Apl_Usuarios" ToRole="Cat_Areas" />
+          <NavigationProperty Name="Cat_Validaciones_Usuarios" Relationship="Entity_Control_Facturas.Fk_UsuarioID_ValidacionesUsuarios_Users" FromRole="Apl_Usuarios" ToRole="Cat_Validaciones_Usuarios" />
+          <NavigationProperty Name="Apl_Usuarios_Permisos" Relationship="Entity_Control_Facturas.FK_UsuarioPermisoIDUsuarios" FromRole="Apl_Usuarios" ToRole="Apl_Usuarios_Permisos" />
+        </EntityType>
+        <EntityType Name="Apl_Usuarios_Password">
+          <Key>
+            <PropertyRef Name="No_Registro" />
+            <PropertyRef Name="Empresa_ID" />
+            <PropertyRef Name="Usuario_ID" />
+          </Key>
+          <Property Name="No_Registro" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Empresa_ID" Type="Int32" Nullable="false" />
+          <Property Name="Usuario_ID" Type="Int32" Nullable="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Password" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Apl_Usuarios_Permisos">
+          <Key>
+            <PropertyRef Name="Usuario_Permiso_ID" />
+          </Key>
+          <Property Name="Usuario_Permiso_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Usuario_ID" Type="Int32" Nullable="false" />
+          <Property Name="Permiso_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Apl_Permisos_Sistemas" Relationship="Entity_Control_Facturas.FK_UsuarioPermisoIDPermisos" FromRole="Apl_Usuarios_Permisos" ToRole="Apl_Permisos_Sistemas" />
+          <NavigationProperty Name="Apl_Usuarios" Relationship="Entity_Control_Facturas.FK_UsuarioPermisoIDUsuarios" FromRole="Apl_Usuarios_Permisos" ToRole="Apl_Usuarios" />
+        </EntityType>
+        <EntityType Name="Cat_Areas">
+          <Key>
+            <PropertyRef Name="Area_Id" />
+          </Key>
+          <Property Name="Area_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Area" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Color" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Apl_Usuarios" Relationship="Entity_Control_Facturas.FK_Apl_Usuarios_Cat_Areas" FromRole="Cat_Areas" ToRole="Apl_Usuarios" />
+          <NavigationProperty Name="Cat_Validaciones" Relationship="Entity_Control_Facturas.FK_Cat_Validaciones_Cat_Areas" FromRole="Cat_Areas" ToRole="Cat_Validaciones" />
+        </EntityType>
+        <EntityType Name="Cat_Conceptos">
+          <Key>
+            <PropertyRef Name="Concepto_Id" />
+          </Key>
+          <Property Name="Concepto_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Concepto" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Descripcion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Captura_Manual" Type="Boolean" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Cat_Validaciones" Relationship="Entity_Control_Facturas.Fk_ConceptoID_Validaciones_Conceptos" FromRole="Cat_Conceptos" ToRole="Cat_Validaciones" />
+          <NavigationProperty Name="Ope_Facturas" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Conceptos" FromRole="Cat_Conceptos" ToRole="Ope_Facturas" />
+        </EntityType>
+        <EntityType Name="Cat_Cuentas">
+          <Key>
+            <PropertyRef Name="Cuenta_Id" />
+          </Key>
+          <Property Name="Cuenta_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cuenta" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Cat_Relacion_Entidad_Cuenta" Relationship="Entity_Control_Facturas.FK_Cat_Relacion_Entidad_Cuenta_Cat_Cuentas" FromRole="Cat_Cuentas" ToRole="Cat_Relacion_Entidad_Cuenta" />
+        </EntityType>
+        <EntityType Name="Cat_Entidades">
+          <Key>
+            <PropertyRef Name="Entidad_Id" />
+          </Key>
+          <Property Name="Entidad_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Entidad" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Cat_Relacion_Entidad_Cuenta" Relationship="Entity_Control_Facturas.FK_Cat_Relacion_Entidad_Cuenta_Cat_Entidades" FromRole="Cat_Entidades" ToRole="Cat_Relacion_Entidad_Cuenta" />
+        </EntityType>
+        <EntityType Name="Cat_Relacion_Entidad_Cuenta">
+          <Key>
+            <PropertyRef Name="Relacion_Id" />
+          </Key>
+          <Property Name="Relacion_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Cuenta_Id" Type="Int32" Nullable="false" />
+          <Property Name="Entidad_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Cat_Cuentas" Relationship="Entity_Control_Facturas.FK_Cat_Relacion_Entidad_Cuenta_Cat_Cuentas" FromRole="Cat_Relacion_Entidad_Cuenta" ToRole="Cat_Cuentas" />
+          <NavigationProperty Name="Cat_Entidades" Relationship="Entity_Control_Facturas.FK_Cat_Relacion_Entidad_Cuenta_Cat_Entidades" FromRole="Cat_Relacion_Entidad_Cuenta" ToRole="Cat_Entidades" />
+          <NavigationProperty Name="Ope_Facturas_Pagos" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Pagos_Cat_Relacion_Entidad_Cuenta" FromRole="Cat_Relacion_Entidad_Cuenta" ToRole="Ope_Facturas_Pagos" />
+        </EntityType>
+        <EntityType Name="Cat_Validaciones">
+          <Key>
+            <PropertyRef Name="Validacion_Id" />
+          </Key>
+          <Property Name="Validacion_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Area_Id" Type="Int32" Nullable="false" />
+          <Property Name="Validacion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Estatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Orden" Type="Int32" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <Property Name="Concepto_ID" Type="Int32" />
+          <NavigationProperty Name="Cat_Areas" Relationship="Entity_Control_Facturas.FK_Cat_Validaciones_Cat_Areas" FromRole="Cat_Validaciones" ToRole="Cat_Areas" />
+          <NavigationProperty Name="Cat_Conceptos" Relationship="Entity_Control_Facturas.Fk_ConceptoID_Validaciones_Conceptos" FromRole="Cat_Validaciones" ToRole="Cat_Conceptos" />
+          <NavigationProperty Name="Ope_Facturas" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Validaciones" FromRole="Cat_Validaciones" ToRole="Ope_Facturas" />
+          <NavigationProperty Name="Ope_Facturas1" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Validaciones1" FromRole="Cat_Validaciones" ToRole="Ope_Facturas" />
+          <NavigationProperty Name="Cat_Validaciones_Usuarios" Relationship="Entity_Control_Facturas.Fk_ValidacionID_ValidacionesUsuarios_Validaciones" FromRole="Cat_Validaciones" ToRole="Cat_Validaciones_Usuarios" />
+        </EntityType>
+        <EntityType Name="Cat_Validaciones_Usuarios">
+          <Key>
+            <PropertyRef Name="Validacion_Usuario_ID" />
+          </Key>
+          <Property Name="Validacion_Usuario_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Validacion_Id" Type="Int32" Nullable="false" />
+          <Property Name="Usuario_Id" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Apl_Usuarios" Relationship="Entity_Control_Facturas.Fk_UsuarioID_ValidacionesUsuarios_Users" FromRole="Cat_Validaciones_Usuarios" ToRole="Apl_Usuarios" />
+          <NavigationProperty Name="Cat_Validaciones" Relationship="Entity_Control_Facturas.Fk_ValidacionID_ValidacionesUsuarios_Validaciones" FromRole="Cat_Validaciones_Usuarios" ToRole="Cat_Validaciones" />
+        </EntityType>
+        <EntityType Name="Ope_Anticipos">
+          <Key>
+            <PropertyRef Name="Anticipo_Id" />
+          </Key>
+          <Property Name="Anticipo_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Anticipo" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Monto" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Saldo" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+          <Property Name="Usado" Type="Boolean" Nullable="false" />
+          <Property Name="Estatus" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Ope_Facturas">
+          <Key>
+            <PropertyRef Name="Factura_Id" />
+          </Key>
+          <Property Name="Factura_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Concepto_Id" Type="Int32" Nullable="false" />
+          <Property Name="Fecha_Recepcion" Type="DateTime" Precision="3" />
+          <Property Name="Fecha_Factura" Type="DateTime" Precision="3" />
+          <Property Name="Estatus" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="UUID" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="RFC" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Razon_Social" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Folio" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Folio_Cheque" Type="Int32" />
+          <Property Name="Referencia_Interna" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Referencia" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Pedimento" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Concepto" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Concepto_Xml" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Moneda" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Subtotal" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="IVA" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Retencion" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Total_Pagar" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Fecha_Entrega_Cxp" Type="DateTime" Precision="3" />
+          <Property Name="Referencia_Pago" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Pago_Proveedor" Type="DateTime" Precision="3" />
+          <Property Name="Validacion_Id" Type="Int32" />
+          <Property Name="Validacion_Rechazada_Id" Type="Int32" />
+          <Property Name="Motivo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <Property Name="S4Future01" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="Cat_Conceptos" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Conceptos" FromRole="Ope_Facturas" ToRole="Cat_Conceptos" />
+          <NavigationProperty Name="Cat_Validaciones" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Validaciones" FromRole="Ope_Facturas" ToRole="Cat_Validaciones" />
+          <NavigationProperty Name="Cat_Validaciones1" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Cat_Validaciones1" FromRole="Ope_Facturas" ToRole="Cat_Validaciones" />
+          <NavigationProperty Name="Ope_Facturas_Anexos" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Anexos_Ope_Facturas" FromRole="Ope_Facturas" ToRole="Ope_Facturas_Anexos" />
+          <NavigationProperty Name="Ope_Facturas_Anticipos" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Anticipos_Ope_Facturas" FromRole="Ope_Facturas" ToRole="Ope_Facturas_Anticipos" />
+          <NavigationProperty Name="Ope_Facturas_Movimientos" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Movimientos_Ope_Facturas" FromRole="Ope_Facturas" ToRole="Ope_Facturas_Movimientos" />
+          <NavigationProperty Name="Ope_Facturas_Pagos" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Pagos_Ope_Facturas" FromRole="Ope_Facturas" ToRole="Ope_Facturas_Pagos" />
+        </EntityType>
+        <EntityType Name="Ope_Facturas_Anexos">
+          <Key>
+            <PropertyRef Name="Anexo_Id" />
+          </Key>
+          <Property Name="Anexo_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Factura_Id" Type="Int32" Nullable="false" />
+          <Property Name="Url" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Tipo" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Ope_Facturas" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Anexos_Ope_Facturas" FromRole="Ope_Facturas_Anexos" ToRole="Ope_Facturas" />
+        </EntityType>
+        <EntityType Name="Ope_Facturas_Anticipos">
+          <Key>
+            <PropertyRef Name="Anticipo_Factura_Id" />
+          </Key>
+          <Property Name="Anticipo_Factura_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Factura_Id" Type="Int32" Nullable="false" />
+          <Property Name="Anticipo_Id" Type="Int32" Nullable="false" />
+          <Property Name="Monto" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Ope_Facturas" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Anticipos_Ope_Facturas" FromRole="Ope_Facturas_Anticipos" ToRole="Ope_Facturas" />
+        </EntityType>
+        <EntityType Name="Ope_Facturas_Movimientos">
+          <Key>
+            <PropertyRef Name="Movimiento_Id" />
+          </Key>
+          <Property Name="Movimiento_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Factura_Id" Type="Int32" Nullable="false" />
+          <Property Name="Accion" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Usuario" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Ope_Facturas" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Movimientos_Ope_Facturas" FromRole="Ope_Facturas_Movimientos" ToRole="Ope_Facturas" />
+        </EntityType>
+        <EntityType Name="Ope_Facturas_Pagos">
+          <Key>
+            <PropertyRef Name="Pago_Id" />
+          </Key>
+          <Property Name="Pago_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Factura_Id" Type="Int32" Nullable="false" />
+          <Property Name="Relacion_Id" Type="Int32" />
+          <Property Name="Monto" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="Usuario_Creo" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Creo" Type="DateTime" Precision="3" />
+          <Property Name="Usuario_Modifico" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Fecha_Modifico" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Cat_Relacion_Entidad_Cuenta" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Pagos_Cat_Relacion_Entidad_Cuenta" FromRole="Ope_Facturas_Pagos" ToRole="Cat_Relacion_Entidad_Cuenta" />
+          <NavigationProperty Name="Ope_Facturas" Relationship="Entity_Control_Facturas.FK_Ope_Facturas_Pagos_Ope_Facturas" FromRole="Ope_Facturas_Pagos" ToRole="Ope_Facturas" />
+        </EntityType>
+        <EntityType Name="XREFileAdmin">
+          <Key>
+            <PropertyRef Name="CpnyID" />
+            <PropertyRef Name="Crtd_DateTime" />
+            <PropertyRef Name="Crtd_Prog" />
+            <PropertyRef Name="Crtd_User" />
+            <PropertyRef Name="CuryId" />
+            <PropertyRef Name="DocAmt" />
+            <PropertyRef Name="DocDate" />
+            <PropertyRef Name="DocType" />
+            <PropertyRef Name="FileNameXML" />
+            <PropertyRef Name="Folio" />
+            <PropertyRef Name="FullPath" />
+            <PropertyRef Name="LUpd_DateTime" />
+            <PropertyRef Name="LUpd_Prog" />
+            <PropertyRef Name="LUpd_User" />
+            <PropertyRef Name="NoteId" />
+            <PropertyRef Name="PmtMthdID" />
+            <PropertyRef Name="RefNbr" />
+            <PropertyRef Name="RFC" />
+            <PropertyRef Name="S4Future01" />
+            <PropertyRef Name="S4Future02" />
+            <PropertyRef Name="S4Future03" />
+            <PropertyRef Name="S4Future04" />
+            <PropertyRef Name="S4Future05" />
+            <PropertyRef Name="S4Future06" />
+            <PropertyRef Name="S4Future07" />
+            <PropertyRef Name="S4Future08" />
+            <PropertyRef Name="S4Future09" />
+            <PropertyRef Name="S4Future10" />
+            <PropertyRef Name="S4Future11" />
+            <PropertyRef Name="S4Future12" />
+            <PropertyRef Name="Serie" />
+            <PropertyRef Name="Selected" />
+            <PropertyRef Name="Status" />
+            <PropertyRef Name="Sub" />
+            <PropertyRef Name="User1" />
+            <PropertyRef Name="User2" />
+            <PropertyRef Name="User3" />
+            <PropertyRef Name="User4" />
+            <PropertyRef Name="User5" />
+            <PropertyRef Name="User6" />
+            <PropertyRef Name="User7" />
+            <PropertyRef Name="User8" />
+            <PropertyRef Name="UUID" />
+            <PropertyRef Name="ValUUIDDate" />
+            <PropertyRef Name="ValUUIDStatus" />
+            <PropertyRef Name="VendId" />
+            <PropertyRef Name="VendName" />
+            <PropertyRef Name="XMLActSinImp" />
+            <PropertyRef Name="XMLConcepto" />
+            <PropertyRef Name="XMLCuryId" />
+            <PropertyRef Name="XMLFormaDePago" />
+            <PropertyRef Name="XMLMetodoPago" />
+            <PropertyRef Name="XMLTaxCodes" />
+            <PropertyRef Name="XMLTerms" />
+            <PropertyRef Name="XMLType" />
+            <PropertyRef Name="tstamp" />
+          </Key>
+          <Property Name="CpnyID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Crtd_DateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Crtd_Prog" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="Crtd_User" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CuryId" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="DocAmt" Type="Double" Nullable="false" />
+          <Property Name="DocDate" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="DocType" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="FileNameXML" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="Folio" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="FullPath" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="LUpd_DateTime" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="LUpd_Prog" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="LUpd_User" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="NoteId" Type="Int32" Nullable="false" />
+          <Property Name="PmtMthdID" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="RefNbr" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="RFC" Type="String" Nullable="false" MaxLength="13" FixedLength="true" Unicode="false" />
+          <Property Name="S4Future01" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="S4Future02" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="S4Future03" Type="Double" Nullable="false" />
+          <Property Name="S4Future04" Type="Double" Nullable="false" />
+          <Property Name="S4Future05" Type="Double" Nullable="false" />
+          <Property Name="S4Future06" Type="Double" Nullable="false" />
+          <Property Name="S4Future07" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="S4Future08" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="S4Future09" Type="Int32" Nullable="false" />
+          <Property Name="S4Future10" Type="Int32" Nullable="false" />
+          <Property Name="S4Future11" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="S4Future12" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Serie" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="Selected" Type="Int16" Nullable="false" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="Sub" Type="String" Nullable="false" MaxLength="24" FixedLength="true" Unicode="false" />
+          <Property Name="User1" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="User2" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="User3" Type="Double" Nullable="false" />
+          <Property Name="User4" Type="Double" Nullable="false" />
+          <Property Name="User5" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="User6" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="User7" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="User8" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="UUID" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="ValUUIDDate" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ValUUIDStatus" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="VendId" Type="String" Nullable="false" MaxLength="15" FixedLength="true" Unicode="false" />
+          <Property Name="VendName" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="XMLActSinImp" Type="Double" Nullable="false" />
+          <Property Name="XMLConcepto" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="false" />
+          <Property Name="XMLCuryId" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="XMLFormaDePago" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="XMLMetodoPago" Type="String" Nullable="false" MaxLength="120" FixedLength="true" Unicode="false" />
+          <Property Name="XMLTaxCodes" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="XMLTerms" Type="String" Nullable="false" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="XMLType" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="tstamp" Type="Binary" Nullable="false" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <Association Name="FK_UsuarioPermisoIDPermisos">
+          <End Type="Entity_Control_Facturas.Apl_Permisos_Sistemas" Role="Apl_Permisos_Sistemas" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Apl_Usuarios_Permisos" Role="Apl_Usuarios_Permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apl_Permisos_Sistemas">
+              <PropertyRef Name="Permiso_ID" />
+            </Principal>
+            <Dependent Role="Apl_Usuarios_Permisos">
+              <PropertyRef Name="Permiso_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Apl_Usuarios_Cat_Areas">
+          <End Type="Entity_Control_Facturas.Cat_Areas" Role="Cat_Areas" Multiplicity="0..1" />
+          <End Type="Entity_Control_Facturas.Apl_Usuarios" Role="Apl_Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Areas">
+              <PropertyRef Name="Area_Id" />
+            </Principal>
+            <Dependent Role="Apl_Usuarios">
+              <PropertyRef Name="Area_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_UsuarioID_ValidacionesUsuarios_Users">
+          <End Type="Entity_Control_Facturas.Apl_Usuarios" Role="Apl_Usuarios" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Cat_Validaciones_Usuarios" Role="Cat_Validaciones_Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apl_Usuarios">
+              <PropertyRef Name="Usuario_ID" />
+            </Principal>
+            <Dependent Role="Cat_Validaciones_Usuarios">
+              <PropertyRef Name="Usuario_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UsuarioPermisoIDUsuarios">
+          <End Type="Entity_Control_Facturas.Apl_Usuarios" Role="Apl_Usuarios" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Apl_Usuarios_Permisos" Role="Apl_Usuarios_Permisos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Apl_Usuarios">
+              <PropertyRef Name="Usuario_ID" />
+            </Principal>
+            <Dependent Role="Apl_Usuarios_Permisos">
+              <PropertyRef Name="Usuario_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cat_Validaciones_Cat_Areas">
+          <End Type="Entity_Control_Facturas.Cat_Areas" Role="Cat_Areas" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Cat_Validaciones" Role="Cat_Validaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Areas">
+              <PropertyRef Name="Area_Id" />
+            </Principal>
+            <Dependent Role="Cat_Validaciones">
+              <PropertyRef Name="Area_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ConceptoID_Validaciones_Conceptos">
+          <End Type="Entity_Control_Facturas.Cat_Conceptos" Role="Cat_Conceptos" Multiplicity="0..1" />
+          <End Type="Entity_Control_Facturas.Cat_Validaciones" Role="Cat_Validaciones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Conceptos">
+              <PropertyRef Name="Concepto_Id" />
+            </Principal>
+            <Dependent Role="Cat_Validaciones">
+              <PropertyRef Name="Concepto_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Cat_Conceptos">
+          <End Type="Entity_Control_Facturas.Cat_Conceptos" Role="Cat_Conceptos" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Ope_Facturas" Role="Ope_Facturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Conceptos">
+              <PropertyRef Name="Concepto_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas">
+              <PropertyRef Name="Concepto_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cat_Relacion_Entidad_Cuenta_Cat_Cuentas">
+          <End Type="Entity_Control_Facturas.Cat_Cuentas" Role="Cat_Cuentas" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Cat_Relacion_Entidad_Cuenta" Role="Cat_Relacion_Entidad_Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Cuentas">
+              <PropertyRef Name="Cuenta_Id" />
+            </Principal>
+            <Dependent Role="Cat_Relacion_Entidad_Cuenta">
+              <PropertyRef Name="Cuenta_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Cat_Relacion_Entidad_Cuenta_Cat_Entidades">
+          <End Type="Entity_Control_Facturas.Cat_Entidades" Role="Cat_Entidades" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Cat_Relacion_Entidad_Cuenta" Role="Cat_Relacion_Entidad_Cuenta" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Entidades">
+              <PropertyRef Name="Entidad_Id" />
+            </Principal>
+            <Dependent Role="Cat_Relacion_Entidad_Cuenta">
+              <PropertyRef Name="Entidad_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Pagos_Cat_Relacion_Entidad_Cuenta">
+          <End Type="Entity_Control_Facturas.Cat_Relacion_Entidad_Cuenta" Role="Cat_Relacion_Entidad_Cuenta" Multiplicity="0..1" />
+          <End Type="Entity_Control_Facturas.Ope_Facturas_Pagos" Role="Ope_Facturas_Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Relacion_Entidad_Cuenta">
+              <PropertyRef Name="Relacion_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas_Pagos">
+              <PropertyRef Name="Relacion_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Cat_Validaciones">
+          <End Type="Entity_Control_Facturas.Cat_Validaciones" Role="Cat_Validaciones" Multiplicity="0..1" />
+          <End Type="Entity_Control_Facturas.Ope_Facturas" Role="Ope_Facturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Validaciones">
+              <PropertyRef Name="Validacion_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas">
+              <PropertyRef Name="Validacion_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Cat_Validaciones1">
+          <End Type="Entity_Control_Facturas.Cat_Validaciones" Role="Cat_Validaciones" Multiplicity="0..1" />
+          <End Type="Entity_Control_Facturas.Ope_Facturas" Role="Ope_Facturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Validaciones">
+              <PropertyRef Name="Validacion_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas">
+              <PropertyRef Name="Validacion_Rechazada_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ValidacionID_ValidacionesUsuarios_Validaciones">
+          <End Type="Entity_Control_Facturas.Cat_Validaciones" Role="Cat_Validaciones" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Cat_Validaciones_Usuarios" Role="Cat_Validaciones_Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cat_Validaciones">
+              <PropertyRef Name="Validacion_Id" />
+            </Principal>
+            <Dependent Role="Cat_Validaciones_Usuarios">
+              <PropertyRef Name="Validacion_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Anexos_Ope_Facturas">
+          <End Type="Entity_Control_Facturas.Ope_Facturas" Role="Ope_Facturas" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Ope_Facturas_Anexos" Role="Ope_Facturas_Anexos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ope_Facturas">
+              <PropertyRef Name="Factura_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas_Anexos">
+              <PropertyRef Name="Factura_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Anticipos_Ope_Facturas">
+          <End Type="Entity_Control_Facturas.Ope_Facturas" Role="Ope_Facturas" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Ope_Facturas_Anticipos" Role="Ope_Facturas_Anticipos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ope_Facturas">
+              <PropertyRef Name="Factura_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas_Anticipos">
+              <PropertyRef Name="Factura_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Movimientos_Ope_Facturas">
+          <End Type="Entity_Control_Facturas.Ope_Facturas" Role="Ope_Facturas" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Ope_Facturas_Movimientos" Role="Ope_Facturas_Movimientos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ope_Facturas">
+              <PropertyRef Name="Factura_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas_Movimientos">
+              <PropertyRef Name="Factura_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Ope_Facturas_Pagos_Ope_Facturas">
+          <End Type="Entity_Control_Facturas.Ope_Facturas" Role="Ope_Facturas" Multiplicity="1" />
+          <End Type="Entity_Control_Facturas.Ope_Facturas_Pagos" Role="Ope_Facturas_Pagos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Ope_Facturas">
+              <PropertyRef Name="Factura_Id" />
+            </Principal>
+            <Dependent Role="Ope_Facturas_Pagos">
+              <PropertyRef Name="Factura_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Entity_Control_FacturasStoreContainer" CdmEntityContainer="Entity_CF">
+          <EntitySetMapping Name="APDoc">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.APDoc">
+              <MappingFragment StoreEntitySet="APDoc">
+                <ScalarProperty Name="tstamp" ColumnName="tstamp" />
+                <ScalarProperty Name="VendName" ColumnName="VendName" />
+                <ScalarProperty Name="VendId" ColumnName="VendId" />
+                <ScalarProperty Name="User8" ColumnName="User8" />
+                <ScalarProperty Name="User7" ColumnName="User7" />
+                <ScalarProperty Name="User6" ColumnName="User6" />
+                <ScalarProperty Name="User5" ColumnName="User5" />
+                <ScalarProperty Name="User4" ColumnName="User4" />
+                <ScalarProperty Name="User3" ColumnName="User3" />
+                <ScalarProperty Name="User2" ColumnName="User2" />
+                <ScalarProperty Name="User1" ColumnName="User1" />
+                <ScalarProperty Name="TxblTot03" ColumnName="TxblTot03" />
+                <ScalarProperty Name="TxblTot02" ColumnName="TxblTot02" />
+                <ScalarProperty Name="TxblTot01" ColumnName="TxblTot01" />
+                <ScalarProperty Name="TxblTot00" ColumnName="TxblTot00" />
+                <ScalarProperty Name="Terms" ColumnName="Terms" />
+                <ScalarProperty Name="TaxTot03" ColumnName="TaxTot03" />
+                <ScalarProperty Name="TaxTot02" ColumnName="TaxTot02" />
+                <ScalarProperty Name="TaxTot01" ColumnName="TaxTot01" />
+                <ScalarProperty Name="TaxTot00" ColumnName="TaxTot00" />
+                <ScalarProperty Name="TaxId03" ColumnName="TaxId03" />
+                <ScalarProperty Name="TaxId02" ColumnName="TaxId02" />
+                <ScalarProperty Name="TaxId01" ColumnName="TaxId01" />
+                <ScalarProperty Name="TaxId00" ColumnName="TaxId00" />
+                <ScalarProperty Name="TaxCntr03" ColumnName="TaxCntr03" />
+                <ScalarProperty Name="TaxCntr02" ColumnName="TaxCntr02" />
+                <ScalarProperty Name="TaxCntr01" ColumnName="TaxCntr01" />
+                <ScalarProperty Name="TaxCntr00" ColumnName="TaxCntr00" />
+                <ScalarProperty Name="Subcontract" ColumnName="Subcontract" />
+                <ScalarProperty Name="Sub" ColumnName="Sub" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Selected" ColumnName="Selected" />
+                <ScalarProperty Name="S4Future12" ColumnName="S4Future12" />
+                <ScalarProperty Name="S4Future11" ColumnName="S4Future11" />
+                <ScalarProperty Name="S4Future10" ColumnName="S4Future10" />
+                <ScalarProperty Name="S4Future09" ColumnName="S4Future09" />
+                <ScalarProperty Name="S4Future08" ColumnName="S4Future08" />
+                <ScalarProperty Name="S4Future07" ColumnName="S4Future07" />
+                <ScalarProperty Name="S4Future06" ColumnName="S4Future06" />
+                <ScalarProperty Name="S4Future05" ColumnName="S4Future05" />
+                <ScalarProperty Name="S4Future04" ColumnName="S4Future04" />
+                <ScalarProperty Name="S4Future03" ColumnName="S4Future03" />
+                <ScalarProperty Name="S4Future02" ColumnName="S4Future02" />
+                <ScalarProperty Name="S4Future01" ColumnName="S4Future01" />
+                <ScalarProperty Name="Rlsed" ColumnName="Rlsed" />
+                <ScalarProperty Name="RGOLAmt" ColumnName="RGOLAmt" />
+                <ScalarProperty Name="Retention" ColumnName="Retention" />
+                <ScalarProperty Name="RefNbr" ColumnName="RefNbr" />
+                <ScalarProperty Name="RecordID" ColumnName="RecordID" />
+                <ScalarProperty Name="ProjectID" ColumnName="ProjectID" />
+                <ScalarProperty Name="PrePay_RefNbr" ColumnName="PrePay_RefNbr" />
+                <ScalarProperty Name="PONbr" ColumnName="PONbr" />
+                <ScalarProperty Name="PmtMethod" ColumnName="PmtMethod" />
+                <ScalarProperty Name="PmtID" ColumnName="PmtID" />
+                <ScalarProperty Name="PmtAmt" ColumnName="PmtAmt" />
+                <ScalarProperty Name="PerPost" ColumnName="PerPost" />
+                <ScalarProperty Name="PerEnt" ColumnName="PerEnt" />
+                <ScalarProperty Name="PerClosed" ColumnName="PerClosed" />
+                <ScalarProperty Name="PC_Status" ColumnName="PC_Status" />
+                <ScalarProperty Name="PayHoldDesc" ColumnName="PayHoldDesc" />
+                <ScalarProperty Name="PayDate" ColumnName="PayDate" />
+                <ScalarProperty Name="OrigDocAmt" ColumnName="OrigDocAmt" />
+                <ScalarProperty Name="OpenDoc" ColumnName="OpenDoc" />
+                <ScalarProperty Name="NoteID" ColumnName="NoteID" />
+                <ScalarProperty Name="NbrCycle" ColumnName="NbrCycle" />
+                <ScalarProperty Name="MasterDocNbr" ColumnName="MasterDocNbr" />
+                <ScalarProperty Name="LUpd_User" ColumnName="LUpd_User" />
+                <ScalarProperty Name="LUpd_Prog" ColumnName="LUpd_Prog" />
+                <ScalarProperty Name="LUpd_DateTime" ColumnName="LUpd_DateTime" />
+                <ScalarProperty Name="LineCntr" ColumnName="LineCntr" />
+                <ScalarProperty Name="LCCode" ColumnName="LCCode" />
+                <ScalarProperty Name="InvcNbr" ColumnName="InvcNbr" />
+                <ScalarProperty Name="InvcDate" ColumnName="InvcDate" />
+                <ScalarProperty Name="InstallNbr" ColumnName="InstallNbr" />
+                <ScalarProperty Name="FreightAmt" ColumnName="FreightAmt" />
+                <ScalarProperty Name="ExcludeFreight" ColumnName="ExcludeFreight" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Econfirm" ColumnName="Econfirm" />
+                <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+                <ScalarProperty Name="DocType" ColumnName="DocType" />
+                <ScalarProperty Name="DocDesc" ColumnName="DocDesc" />
+                <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+                <ScalarProperty Name="DocClass" ColumnName="DocClass" />
+                <ScalarProperty Name="DocBal" ColumnName="DocBal" />
+                <ScalarProperty Name="Doc1099" ColumnName="Doc1099" />
+                <ScalarProperty Name="DiscTkn" ColumnName="DiscTkn" />
+                <ScalarProperty Name="DiscDate" ColumnName="DiscDate" />
+                <ScalarProperty Name="DiscBal" ColumnName="DiscBal" />
+                <ScalarProperty Name="DirectDeposit" ColumnName="DirectDeposit" />
+                <ScalarProperty Name="DfltDetail" ColumnName="DfltDetail" />
+                <ScalarProperty Name="Cycle" ColumnName="Cycle" />
+                <ScalarProperty Name="CuryTxblTot03" ColumnName="CuryTxblTot03" />
+                <ScalarProperty Name="CuryTxblTot02" ColumnName="CuryTxblTot02" />
+                <ScalarProperty Name="CuryTxblTot01" ColumnName="CuryTxblTot01" />
+                <ScalarProperty Name="CuryTxblTot00" ColumnName="CuryTxblTot00" />
+                <ScalarProperty Name="CuryTaxTot03" ColumnName="CuryTaxTot03" />
+                <ScalarProperty Name="CuryTaxTot02" ColumnName="CuryTaxTot02" />
+                <ScalarProperty Name="CuryTaxTot01" ColumnName="CuryTaxTot01" />
+                <ScalarProperty Name="CuryTaxTot00" ColumnName="CuryTaxTot00" />
+                <ScalarProperty Name="CuryRateType" ColumnName="CuryRateType" />
+                <ScalarProperty Name="CuryRate" ColumnName="CuryRate" />
+                <ScalarProperty Name="CuryPmtAmt" ColumnName="CuryPmtAmt" />
+                <ScalarProperty Name="CuryOrigDocAmt" ColumnName="CuryOrigDocAmt" />
+                <ScalarProperty Name="CuryMultDiv" ColumnName="CuryMultDiv" />
+                <ScalarProperty Name="CuryId" ColumnName="CuryId" />
+                <ScalarProperty Name="CuryEffDate" ColumnName="CuryEffDate" />
+                <ScalarProperty Name="CuryDocBal" ColumnName="CuryDocBal" />
+                <ScalarProperty Name="CuryDiscTkn" ColumnName="CuryDiscTkn" />
+                <ScalarProperty Name="CuryDiscBal" ColumnName="CuryDiscBal" />
+                <ScalarProperty Name="CuryBWAmt" ColumnName="CuryBWAmt" />
+                <ScalarProperty Name="CurrentNbr" ColumnName="CurrentNbr" />
+                <ScalarProperty Name="Crtd_User" ColumnName="Crtd_User" />
+                <ScalarProperty Name="Crtd_Prog" ColumnName="Crtd_Prog" />
+                <ScalarProperty Name="Crtd_DateTime" ColumnName="Crtd_DateTime" />
+                <ScalarProperty Name="CpnyID" ColumnName="CpnyID" />
+                <ScalarProperty Name="CodeType" ColumnName="CodeType" />
+                <ScalarProperty Name="ClearDate" ColumnName="ClearDate" />
+                <ScalarProperty Name="ClearAmt" ColumnName="ClearAmt" />
+                <ScalarProperty Name="CashSub" ColumnName="CashSub" />
+                <ScalarProperty Name="CashAcct" ColumnName="CashAcct" />
+                <ScalarProperty Name="BWAmt" ColumnName="BWAmt" />
+                <ScalarProperty Name="BatSeq" ColumnName="BatSeq" />
+                <ScalarProperty Name="BatNbr" ColumnName="BatNbr" />
+                <ScalarProperty Name="ApplyRefNbr" ColumnName="ApplyRefNbr" />
+                <ScalarProperty Name="ApplyDate" ColumnName="ApplyDate" />
+                <ScalarProperty Name="ApplyAmt" ColumnName="ApplyAmt" />
+                <ScalarProperty Name="AddlCost" ColumnName="AddlCost" />
+                <ScalarProperty Name="Acct" ColumnName="Acct" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Accesos">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Accesos">
+              <MappingFragment StoreEntitySet="Apl_Accesos">
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Equipo_Creo" ColumnName="Equipo_Creo" />
+                <ScalarProperty Name="Ip_Creo" ColumnName="Ip_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Consultar" ColumnName="Consultar" />
+                <ScalarProperty Name="Eliminar" ColumnName="Eliminar" />
+                <ScalarProperty Name="Cambio" ColumnName="Cambio" />
+                <ScalarProperty Name="Alta" ColumnName="Alta" />
+                <ScalarProperty Name="Habilitado" ColumnName="Habilitado" />
+                <ScalarProperty Name="Estatus_ID" ColumnName="Estatus_ID" />
+                <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+                <ScalarProperty Name="Rol_ID" ColumnName="Rol_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Empresas">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Empresas">
+              <MappingFragment StoreEntitySet="Apl_Empresas">
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Ruta_Imagen" ColumnName="Ruta_Imagen" />
+                <ScalarProperty Name="Comentarios" ColumnName="Comentarios" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Estado" ColumnName="Estado" />
+                <ScalarProperty Name="Ciudad" ColumnName="Ciudad" />
+                <ScalarProperty Name="CP" ColumnName="CP" />
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="Colonia" ColumnName="Colonia" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="Entidad_Empresa_ID" ColumnName="Entidad_Empresa_ID" />
+                <ScalarProperty Name="Estatus_ID" ColumnName="Estatus_ID" />
+                <ScalarProperty Name="Empresa_ID" ColumnName="Empresa_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Entidades_Empresas">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Entidades_Empresas">
+              <MappingFragment StoreEntitySet="Apl_Entidades_Empresas">
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Clave" ColumnName="Clave" />
+                <ScalarProperty Name="Entidad_Empresa_ID" ColumnName="Entidad_Empresa_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Estatus">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Estatus">
+              <MappingFragment StoreEntitySet="Apl_Estatus">
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Estatus_ID" ColumnName="Estatus_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Menus">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Menus">
+              <MappingFragment StoreEntitySet="Apl_Menus">
+                <ScalarProperty Name="Tipo_Menu" ColumnName="Tipo_Menu" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="Icono" ColumnName="Icono" />
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Nombre_Mostrar" ColumnName="Nombre_Mostrar" />
+                <ScalarProperty Name="URL_LINK" ColumnName="URL_LINK" />
+                <ScalarProperty Name="Menu_Descripcion" ColumnName="Menu_Descripcion" />
+                <ScalarProperty Name="Parent_ID" ColumnName="Parent_ID" />
+                <ScalarProperty Name="Modulo_ID" ColumnName="Modulo_ID" />
+                <ScalarProperty Name="Estatus_ID" ColumnName="Estatus_ID" />
+                <ScalarProperty Name="Menu_ID" ColumnName="Menu_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Modulos">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Modulos">
+              <MappingFragment StoreEntitySet="Apl_Modulos">
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Icono" ColumnName="Icono" />
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Modulo_ID" ColumnName="Modulo_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Niveles">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Niveles">
+              <MappingFragment StoreEntitySet="Apl_Niveles">
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Nivel_ID" ColumnName="Nivel_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Parametros">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Parametros">
+              <MappingFragment StoreEntitySet="Apl_Parametros">
+                <ScalarProperty Name="Folio_Inicio" ColumnName="Folio_Inicio" />
+                <ScalarProperty Name="Empresa_ID" ColumnName="Empresa_ID" />
+                <ScalarProperty Name="Parametro_ID" ColumnName="Parametro_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Permisos_Sistemas">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Permisos_Sistemas">
+              <MappingFragment StoreEntitySet="Apl_Permisos_Sistemas">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre_Permiso" ColumnName="Nombre_Permiso" />
+                <ScalarProperty Name="Permiso_ID" ColumnName="Permiso_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Registro_Accesos">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Registro_Accesos">
+              <MappingFragment StoreEntitySet="Apl_Registro_Accesos">
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+                <ScalarProperty Name="Registro_ID" ColumnName="Registro_ID" />
+                <ScalarProperty Name="Empresa_ID" ColumnName="Empresa_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Rel_Usuarios_Roles">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Rel_Usuarios_Roles">
+              <MappingFragment StoreEntitySet="Apl_Rel_Usuarios_Roles">
+                <ScalarProperty Name="Rel_Usuario_Rol_ID" ColumnName="Rel_Usuario_Rol_ID" />
+                <ScalarProperty Name="Sucursal_ID" ColumnName="Sucursal_ID" />
+                <ScalarProperty Name="Empresa_ID" ColumnName="Empresa_ID" />
+                <ScalarProperty Name="Rol_ID" ColumnName="Rol_ID" />
+                <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Roles">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Roles">
+              <MappingFragment StoreEntitySet="Apl_Roles">
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Estatus_ID" ColumnName="Estatus_ID" />
+                <ScalarProperty Name="Nivel_ID" ColumnName="Nivel_ID" />
+                <ScalarProperty Name="Empresa_ID" ColumnName="Empresa_ID" />
+                <ScalarProperty Name="Rol_ID" ColumnName="Rol_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Roles_Sucursales">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Roles_Sucursales">
+              <MappingFragment StoreEntitySet="Apl_Roles_Sucursales">
+                <ScalarProperty Name="Rol_ID" ColumnName="Rol_ID" />
+                <ScalarProperty Name="Sucursal_ID" ColumnName="Sucursal_ID" />
+                <ScalarProperty Name="Empresa_ID" ColumnName="Empresa_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Usuarios">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Usuarios">
+              <MappingFragment StoreEntitySet="Apl_Usuarios">
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Area_Id" ColumnName="Area_Id" />
+                <ScalarProperty Name="Estatus_ID" ColumnName="Estatus_ID" />
+                <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+                <ScalarProperty Name="Empresa_ID" ColumnName="Empresa_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Usuarios_Password">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Usuarios_Password">
+              <MappingFragment StoreEntitySet="Apl_Usuarios_Password">
+                <ScalarProperty Name="Fecha_Password" ColumnName="Fecha_Password" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+                <ScalarProperty Name="Empresa_ID" ColumnName="Empresa_ID" />
+                <ScalarProperty Name="No_Registro" ColumnName="No_Registro" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Apl_Usuarios_Permisos">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Apl_Usuarios_Permisos">
+              <MappingFragment StoreEntitySet="Apl_Usuarios_Permisos">
+                <ScalarProperty Name="Permiso_ID" ColumnName="Permiso_ID" />
+                <ScalarProperty Name="Usuario_ID" ColumnName="Usuario_ID" />
+                <ScalarProperty Name="Usuario_Permiso_ID" ColumnName="Usuario_Permiso_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cat_Areas">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Cat_Areas">
+              <MappingFragment StoreEntitySet="Cat_Areas">
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Color" ColumnName="Color" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="Area_Id" ColumnName="Area_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cat_Conceptos">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Cat_Conceptos">
+              <MappingFragment StoreEntitySet="Cat_Conceptos">
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Captura_Manual" ColumnName="Captura_Manual" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+                <ScalarProperty Name="Concepto_Id" ColumnName="Concepto_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cat_Cuentas">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Cat_Cuentas">
+              <MappingFragment StoreEntitySet="Cat_Cuentas">
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Cuenta" ColumnName="Cuenta" />
+                <ScalarProperty Name="Cuenta_Id" ColumnName="Cuenta_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cat_Entidades">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Cat_Entidades">
+              <MappingFragment StoreEntitySet="Cat_Entidades">
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Entidad" ColumnName="Entidad" />
+                <ScalarProperty Name="Entidad_Id" ColumnName="Entidad_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cat_Relacion_Entidad_Cuenta">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Cat_Relacion_Entidad_Cuenta">
+              <MappingFragment StoreEntitySet="Cat_Relacion_Entidad_Cuenta">
+                <ScalarProperty Name="Entidad_Id" ColumnName="Entidad_Id" />
+                <ScalarProperty Name="Cuenta_Id" ColumnName="Cuenta_Id" />
+                <ScalarProperty Name="Relacion_Id" ColumnName="Relacion_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cat_Validaciones">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Cat_Validaciones">
+              <MappingFragment StoreEntitySet="Cat_Validaciones">
+                <ScalarProperty Name="Concepto_ID" ColumnName="Concepto_ID" />
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Orden" ColumnName="Orden" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Validacion" ColumnName="Validacion" />
+                <ScalarProperty Name="Area_Id" ColumnName="Area_Id" />
+                <ScalarProperty Name="Validacion_Id" ColumnName="Validacion_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cat_Validaciones_Usuarios">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Cat_Validaciones_Usuarios">
+              <MappingFragment StoreEntitySet="Cat_Validaciones_Usuarios">
+                <ScalarProperty Name="Usuario_Id" ColumnName="Usuario_Id" />
+                <ScalarProperty Name="Validacion_Id" ColumnName="Validacion_Id" />
+                <ScalarProperty Name="Validacion_Usuario_ID" ColumnName="Validacion_Usuario_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ope_Anticipos">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Ope_Anticipos">
+              <MappingFragment StoreEntitySet="Ope_Anticipos">
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Usado" ColumnName="Usado" />
+                <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="Anticipo" ColumnName="Anticipo" />
+                <ScalarProperty Name="Anticipo_Id" ColumnName="Anticipo_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ope_Facturas">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Ope_Facturas">
+              <MappingFragment StoreEntitySet="Ope_Facturas">
+                <ScalarProperty Name="S4Future01" ColumnName="S4Future01" />
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Motivo" ColumnName="Motivo" />
+                <ScalarProperty Name="Validacion_Rechazada_Id" ColumnName="Validacion_Rechazada_Id" />
+                <ScalarProperty Name="Validacion_Id" ColumnName="Validacion_Id" />
+                <ScalarProperty Name="Fecha_Pago_Proveedor" ColumnName="Fecha_Pago_Proveedor" />
+                <ScalarProperty Name="Referencia_Pago" ColumnName="Referencia_Pago" />
+                <ScalarProperty Name="Fecha_Entrega_Cxp" ColumnName="Fecha_Entrega_Cxp" />
+                <ScalarProperty Name="Total_Pagar" ColumnName="Total_Pagar" />
+                <ScalarProperty Name="Retencion" ColumnName="Retencion" />
+                <ScalarProperty Name="IVA" ColumnName="IVA" />
+                <ScalarProperty Name="Subtotal" ColumnName="Subtotal" />
+                <ScalarProperty Name="Moneda" ColumnName="Moneda" />
+                <ScalarProperty Name="Concepto_Xml" ColumnName="Concepto_Xml" />
+                <ScalarProperty Name="Concepto" ColumnName="Concepto" />
+                <ScalarProperty Name="Pedimento" ColumnName="Pedimento" />
+                <ScalarProperty Name="Referencia" ColumnName="Referencia" />
+                <ScalarProperty Name="Referencia_Interna" ColumnName="Referencia_Interna" />
+                <ScalarProperty Name="Folio_Cheque" ColumnName="Folio_Cheque" />
+                <ScalarProperty Name="Folio" ColumnName="Folio" />
+                <ScalarProperty Name="Razon_Social" ColumnName="Razon_Social" />
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+                <ScalarProperty Name="Estatus" ColumnName="Estatus" />
+                <ScalarProperty Name="Fecha_Factura" ColumnName="Fecha_Factura" />
+                <ScalarProperty Name="Fecha_Recepcion" ColumnName="Fecha_Recepcion" />
+                <ScalarProperty Name="Concepto_Id" ColumnName="Concepto_Id" />
+                <ScalarProperty Name="Factura_Id" ColumnName="Factura_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ope_Facturas_Anexos">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Ope_Facturas_Anexos">
+              <MappingFragment StoreEntitySet="Ope_Facturas_Anexos">
+                <ScalarProperty Name="Tipo" ColumnName="Tipo" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Url" ColumnName="Url" />
+                <ScalarProperty Name="Factura_Id" ColumnName="Factura_Id" />
+                <ScalarProperty Name="Anexo_Id" ColumnName="Anexo_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ope_Facturas_Anticipos">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Ope_Facturas_Anticipos">
+              <MappingFragment StoreEntitySet="Ope_Facturas_Anticipos">
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="Anticipo_Id" ColumnName="Anticipo_Id" />
+                <ScalarProperty Name="Factura_Id" ColumnName="Factura_Id" />
+                <ScalarProperty Name="Anticipo_Factura_Id" ColumnName="Anticipo_Factura_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ope_Facturas_Movimientos">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Ope_Facturas_Movimientos">
+              <MappingFragment StoreEntitySet="Ope_Facturas_Movimientos">
+                <ScalarProperty Name="Usuario" ColumnName="Usuario" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Accion" ColumnName="Accion" />
+                <ScalarProperty Name="Factura_Id" ColumnName="Factura_Id" />
+                <ScalarProperty Name="Movimiento_Id" ColumnName="Movimiento_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Ope_Facturas_Pagos">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.Ope_Facturas_Pagos">
+              <MappingFragment StoreEntitySet="Ope_Facturas_Pagos">
+                <ScalarProperty Name="Fecha_Modifico" ColumnName="Fecha_Modifico" />
+                <ScalarProperty Name="Usuario_Modifico" ColumnName="Usuario_Modifico" />
+                <ScalarProperty Name="Fecha_Creo" ColumnName="Fecha_Creo" />
+                <ScalarProperty Name="Usuario_Creo" ColumnName="Usuario_Creo" />
+                <ScalarProperty Name="Monto" ColumnName="Monto" />
+                <ScalarProperty Name="Relacion_Id" ColumnName="Relacion_Id" />
+                <ScalarProperty Name="Factura_Id" ColumnName="Factura_Id" />
+                <ScalarProperty Name="Pago_Id" ColumnName="Pago_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="XREFileAdmin">
+            <EntityTypeMapping TypeName="Entity_Control_Facturas.XREFileAdmin">
+              <MappingFragment StoreEntitySet="XREFileAdmin">
+                <ScalarProperty Name="tstamp" ColumnName="tstamp" />
+                <ScalarProperty Name="XMLType" ColumnName="XMLType" />
+                <ScalarProperty Name="XMLTerms" ColumnName="XMLTerms" />
+                <ScalarProperty Name="XMLTaxCodes" ColumnName="XMLTaxCodes" />
+                <ScalarProperty Name="XMLMetodoPago" ColumnName="XMLMetodoPago" />
+                <ScalarProperty Name="XMLFormaDePago" ColumnName="XMLFormaDePago" />
+                <ScalarProperty Name="XMLCuryId" ColumnName="XMLCuryId" />
+                <ScalarProperty Name="XMLConcepto" ColumnName="XMLConcepto" />
+                <ScalarProperty Name="XMLActSinImp" ColumnName="XMLActSinImp" />
+                <ScalarProperty Name="VendName" ColumnName="VendName" />
+                <ScalarProperty Name="VendId" ColumnName="VendId" />
+                <ScalarProperty Name="ValUUIDStatus" ColumnName="ValUUIDStatus" />
+                <ScalarProperty Name="ValUUIDDate" ColumnName="ValUUIDDate" />
+                <ScalarProperty Name="UUID" ColumnName="UUID" />
+                <ScalarProperty Name="User8" ColumnName="User8" />
+                <ScalarProperty Name="User7" ColumnName="User7" />
+                <ScalarProperty Name="User6" ColumnName="User6" />
+                <ScalarProperty Name="User5" ColumnName="User5" />
+                <ScalarProperty Name="User4" ColumnName="User4" />
+                <ScalarProperty Name="User3" ColumnName="User3" />
+                <ScalarProperty Name="User2" ColumnName="User2" />
+                <ScalarProperty Name="User1" ColumnName="User1" />
+                <ScalarProperty Name="Sub" ColumnName="Sub" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Selected" ColumnName="Selected" />
+                <ScalarProperty Name="Serie" ColumnName="Serie" />
+                <ScalarProperty Name="S4Future12" ColumnName="S4Future12" />
+                <ScalarProperty Name="S4Future11" ColumnName="S4Future11" />
+                <ScalarProperty Name="S4Future10" ColumnName="S4Future10" />
+                <ScalarProperty Name="S4Future09" ColumnName="S4Future09" />
+                <ScalarProperty Name="S4Future08" ColumnName="S4Future08" />
+                <ScalarProperty Name="S4Future07" ColumnName="S4Future07" />
+                <ScalarProperty Name="S4Future06" ColumnName="S4Future06" />
+                <ScalarProperty Name="S4Future05" ColumnName="S4Future05" />
+                <ScalarProperty Name="S4Future04" ColumnName="S4Future04" />
+                <ScalarProperty Name="S4Future03" ColumnName="S4Future03" />
+                <ScalarProperty Name="S4Future02" ColumnName="S4Future02" />
+                <ScalarProperty Name="S4Future01" ColumnName="S4Future01" />
+                <ScalarProperty Name="RFC" ColumnName="RFC" />
+                <ScalarProperty Name="RefNbr" ColumnName="RefNbr" />
+                <ScalarProperty Name="PmtMthdID" ColumnName="PmtMthdID" />
+                <ScalarProperty Name="NoteId" ColumnName="NoteId" />
+                <ScalarProperty Name="LUpd_User" ColumnName="LUpd_User" />
+                <ScalarProperty Name="LUpd_Prog" ColumnName="LUpd_Prog" />
+                <ScalarProperty Name="LUpd_DateTime" ColumnName="LUpd_DateTime" />
+                <ScalarProperty Name="FullPath" ColumnName="FullPath" />
+                <ScalarProperty Name="Folio" ColumnName="Folio" />
+                <ScalarProperty Name="FileNameXML" ColumnName="FileNameXML" />
+                <ScalarProperty Name="DocType" ColumnName="DocType" />
+                <ScalarProperty Name="DocDate" ColumnName="DocDate" />
+                <ScalarProperty Name="DocAmt" ColumnName="DocAmt" />
+                <ScalarProperty Name="CuryId" ColumnName="CuryId" />
+                <ScalarProperty Name="Crtd_User" ColumnName="Crtd_User" />
+                <ScalarProperty Name="Crtd_Prog" ColumnName="Crtd_Prog" />
+                <ScalarProperty Name="Crtd_DateTime" ColumnName="Crtd_DateTime" />
+                <ScalarProperty Name="CpnyID" ColumnName="CpnyID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

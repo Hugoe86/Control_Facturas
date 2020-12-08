@@ -1,0 +1,10 @@
+﻿.folder-color { /*color:#ff751a;*/
+    /*color: #ebcaa5;*/
+    font-size: 14px;
+    color:#f5b873;
+    margin-right: 5px;
+}
+.folder-color:hover { /*color:#ff751a;*/
+    color: #ff751a;
+}
+

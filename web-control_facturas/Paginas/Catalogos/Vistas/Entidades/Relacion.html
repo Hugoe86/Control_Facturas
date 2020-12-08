@@ -1,0 +1,71 @@
+﻿
+<div class="modal fade" id="modal_entidad_relacion" name="modal_entidad_relacion" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close cancelar" data-dismiss="modal" aria-label="Close" onclick="_cancelar_modal_relacion_click();">
+                    <i class="fa fa-times text-red"></i>
+                </button>
+                <h3 class="modal-title" id="myModalLabel">
+                    <label id="lbl_titulo_modal_relacion"></label>
+                </h3>
+            </div>
+
+            <div class="modal-body">
+
+
+                <div class="panel panel-color panel-default" id="pnl_datos_oc" style="margin-bottom:10px !important">
+
+                    <div class="panel-body">
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div style="display: none;">
+                                    <label class="fuente_lbl_controles">(*) campos ocultos</label>
+                                    <input id="txt_entidad_relacion_id" type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label class="fuente_lbl_controles">(*) Cuentas</label>
+                                <select id="cmb_cuenta" style="width:100%"></select>
+                            </div>
+                        </div>
+
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+                        <div class="row" style="color:#40bbea;margin-top:8px; margin-bottom:8px">
+                            <div class="col-md-6">
+
+                            </div>
+                            <div class="col-md-6" style="text-align:right">
+                                <div class="btn-group" role="group" style="margin-left: 5px;">
+                                    <button id="btn_agregar_relacion" class="btn btn-success" title="Agregar"><i class="fa fa-check"></i><span id="spn_agregar_relacion">&nbsp;Agregar</span></button>
+                                    <button id="btn_cancelar_relacion" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+                        <table id="tbl_relacion_entidad"  class="table table-responsive"></table>
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,84 @@
+﻿.bootstrap-table .table,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    padding: 3px !important;
+}
+
+.fixed-table-container thead th .th-inner {
+    font-family: 'Roboto Regular' !important;
+    line-height: 24px;
+    overflow: hidden;
+    padding: 3px;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    white-space: nowrap;
+    font-weight: 500;
+    letter-spacing:.5px;
+}
+.fixed-table-footer, .fixed-table-header {
+    height: 30px !important;
+}
+
+.panel {
+    padding-bottom: 10px !important;
+    border: none!important;
+    box-shadow:none !important;
+}
+
+.nested_grid {
+    font-family: Calibri !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    background: linear-gradient(to bottom,#EFF5FF 0,#bfd7fc 100%);
+    background-repeat: repeat-x;
+    color: #000 !important;
+}
+.nested_grid td {
+    border: solid 0.1px #95B8E7;
+}
+.table_inner {
+    border: solid 0.1px #95B8E7 !important;
+}
+
+.alert-info {
+    font-family: Calibri !important;
+    font-size: 12px !important;
+    font-weight: 600;
+    color: #31708f;
+    background-color: #d9edf7;
+    border-color: #bce8f1;
+    letter-spacing:0.3px;
+}
+
+.edit {
+    font-family: Calibri !important;
+    font-size: 13px !important;
+    font-weight: 900;
+    letter-spacing:0.3px;
+    color: #0063b6
+}
+
+.alert {
+    padding: 5px 5px; 
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.panel-heading a.collapsed {
+    background-color: transparent !important;
+}
+
+.panel .panel-heading {
+    font-size: 11px;
+}
+.panel .panel-heading > .panel-options a[data-toggle="remove"] {
+    font-size: 11px;
+}
+
+.panel .panel-heading > .panel-options {
+    font-size: 11px;
+}

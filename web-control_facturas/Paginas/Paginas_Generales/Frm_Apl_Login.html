@@ -1,0 +1,211 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Sistema de Evaluación de Desempeño" />
+    <meta name="author" content="Conectividad y Telecomunicaciones SA de CV" />
+    <link rel="shortcut icon" href="../../Recursos/img/favicon.ico"/>
+    <meta http-equiv="Content-Language" content="es"/>
+
+    <title>General Mills</title>
+    <meta charset="utf-8"/>
+
+    <link href="../../Recursos/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap/css/bootstrap-custom.css" rel="stylesheet" />
+    <link href="../../Recursos/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../Recursos/font-indie/css/indie.css" rel="stylesheet" />
+    <link href="../../Recursos/font-roboto/css/roboto.css" rel="stylesheet" />
+    <link href="../../Recursos/lightbox/ekko-lightbox.min.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-core.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-forms.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-components.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-skins.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/custom.css" rel="stylesheet" />
+    <link href="../../Recursos/estilos/css_login.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap-combo/select2.css" rel="stylesheet" />
+
+    <script src="../../Recursos/jquery/jquery-1.12.3.min.js"></script>
+    <script src="../../Recursos/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../Recursos/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../Recursos/respond.js"></script>
+    <script src="../../Recursos/TweenMax.min.js"></script>
+    <script src="../../Recursos/resizeable.js"></script>
+    <script src="../../Recursos/joinable.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-api.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-toggles.js"></script>
+    <script src="../../Recursos/lightbox/ekko-lightbox.min.js"></script>
+    <script src="../../Recursos/jquery-validate/jquery.validate.min.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-widgets.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-custom.js"></script>
+    <script src="../../Recursos/toastr/toastr.min.js"></script>
+    <script src="../../Recursos/bootstrap-box/dialogs.js"></script>
+    <script src="../../Recursos/bootstrap-box/bootbox.js"></script>
+    <script src="../../Recursos/plugins/jquery.qtip-1.0.0-rc3.min.js"></script>
+    <script src="../../Recursos/javascript/seguridad/Js_Apl_Login.js"></script>
+    <script src="../../Recursos/plugins/jquery.cookie.js"></script>
+    <script src="../../Recursos/bootstrap-combo/select2.js"></script>
+    <script src="../../Recursos/bootstrap-combo/es.js"></script>
+    <script src="../../Recursos/plugins/parsley.js"></script>
+    <style>
+        .select2-container--classic .select2-search--dropdown .select2-search__field {
+            border: 1px solid #cfc7c7;
+            outline: 0;
+            background-color: #FFF;
+            color: #000;
+        }
+
+        .select2-container--classic .select2-dropdown {
+            background-color: #FFF;
+            border: 1px solid transparent;
+            color: #000;
+        }
+
+        .select2-container--classic .select2-results__option--highlighted[aria-selected] {
+            background-color: #68B828;
+            color: #FFF !important;
+            font-weight: bold;
+        }
+
+        .select2-container--classic.select2-container--open .select2-dropdown {
+            border-color: #267AC1;
+        }
+    </style>
+</head>
+<body class="page-body login-page">
+    <div id="login-container" class="login-container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <!-- Errors container -->
+                <div class="errors-container"></div>
+
+                <!-- Add class "fade-in-effect" for login form effect -->
+                <form method="post" role="form" id="login" class="login-form fade-in-effect" novalidate="novalidate">
+
+                    <div class="login-header" style="margin-bottom:20px !important">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="../../Recursos/img/logo_general_mills.png" style="width: 40%; height: 40%; margin:5% 30%" />
+                                
+                            </div>
+                            <div class="col-md-12">
+                                   <span class="h2" style="text-align:center">Control de Facturas</span>
+
+                                <p>Ingresa tus datos para accesar al sistema.</p>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="row" style="align-content:center">
+                            
+                            <div class="form-group; col-md-12" style="display:none;">
+                                    <select id="cmb_tipo_usuario" class="form-control" style="width:100%">
+                                        <option value="">Selecciona el Tipo Usuario</option>
+                                        <option value="Empleado">Empleado</option>
+                                        <option value="Usuario">Supervisor</option>
+                                    </select>
+                            </div>
+                        </div>
+                    <h1></h1>
+
+                        <div id="login-empleado" class="row" style="display:none;">
+                            <div class="form-group">
+                                <label class="control-label" for="no_empleado">Número Empleado</label>
+                                <input type="text" class="form-control input-dark" name="no_empleado" id="no_empleado" autocomplete="off" />
+                            </div>
+                        </div>
+                        <div id="login-usuario" class="row">
+                            <div class="form-group"> 
+                                <label class="control-label" for="username">Correo</label>
+                                <input type="text" class="form-control input-dark" name="username" id="username" autocomplete="off" maxlength="100" />
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label" for="passwd">Contraseña</label>
+                                <input type="password" class="form-control input-dark" name="passwd" id="passwd" autocomplete="off" />
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-left">
+                                    &nbsp;&nbsp;<input type="checkbox" name="remember" id="remember" class="cbr cbr-primary">&nbsp;<span style="font-family: 'Roboto Regular'">Recu&eacute;rdame</span>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 text-left">
+                            </div>
+                            <div class="col-md-6 text-right">
+                                <button type="submit" class="btn btn-secondary btn-icon btn-icon-standalone btn-lg">
+                                    <i class="fa fa-key"></i>
+                                    <span>Entrar</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="login-footer">
+                            <div class="text-center">
+                                <a href="#" onclick="$('#modal_recuperar_password').modal('show', { backdrop: 'static', keyboard: false });">&iquest;Olvidaste tu contrase&ntilde;a?</a>
+                            </div>
+
+                            <div class="info-links text-center">
+                                Derechos Reservados © <a href="http://www.contel.com.mx/" target="_blank">Conectividad y Telecomunicación S.A. de C.V.</a>
+                            </div>
+                        </div>
+</form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal_recuperar_password" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Recuperar contrase&ntilde;a</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="text-center">
+                                <h3><i class="fa fa-lock fa-4x"></i></h3>
+                                <h2 class="text-center">Recuperar Password</h2>
+                                    <p>Enviaremos su password a la cuenta de correo que se configur&oacute; al registrarse.</p>
+                                    <div class="panel-body">
+
+                                    <form class="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="glyphicon glyphicon-envelope color-blue"></i>
+                                                    </span>
+
+                                                    <input class="form-control fix-form-control" id="emailInput" required="" onchange="try{setCustomValidity('')}catch(e){}"
+                                                           oninvalid="setCustomValidity('Por favor ingresar una direcci&oacute;n de correo v&aacute;lida!')" type="email" 
+                                                           placeholder="email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+ 
+                                                <button id="btn_enviar_email" class="btn btn-lg btn-primary  btn-block btn-icon btn-icon-standalone btn-icon-standalone-right" type="submit">
+                                                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                                    <span>Enviar</span>
+                                                </button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

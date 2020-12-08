@@ -1,0 +1,45 @@
+﻿
+<div style="height:50vh !important; width:100% !important;" class="container">
+    <div style="height: 100vh !important;" class="container-fluid">
+        <div class="panel panel-color panel-info" id="panel1" style="margin-bottom: 5px !important">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    <i style="color: white;" class="glyphicon glyphicon-filter"></i>&nbsp;Filtros de b&uacute;squeda
+                </h3>
+                <div class="panel-options">
+                    <a href="#" data-toggle="panel">
+                        <span class="collapse-icon">–</span>
+                        <span class="expand-icon">+</span>
+                    </a>
+                </div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="fuente_lbl_controles">Folio solicitud cheque</label>
+                        <select id="cmb_folio_cheque_filtro" class="form-control" style="width: 100%"></select>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="fuente_lbl_controles">Validaciones</label>
+                        <select id="cmb_validaciones_filtro" class="form-control" style="width: 100%"></select>
+                    </div>
+
+
+                    <div class="col-md-2">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="toolbar" style="margin-left: 5px; margin-top: 10px;">
+            <div class="btn-group" role="group" style="margin-left: 5px;">
+                <button id="btn_busqueda" type="button" class="btn btn-info btn-sm" title="Buscar"><i class="fa fa-search"></i>&nbsp;Buscar</button>
+                <button id="btn_inicio" type="button" class="btn btn-info btn-sm" title="Inicio"><i class="glyphicon glyphicon-home"></i>&nbsp;Inicio</button>
+
+            </div>
+        </div>
+
+        <table id="tbl_facturas" data-toolbar="#toolbar" class="table table-responsive"></table>
+    </div>
+</div>
+

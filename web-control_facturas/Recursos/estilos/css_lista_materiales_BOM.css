@@ -1,0 +1,16 @@
+﻿html .select2-container {
+    width: 100% !important;
+}
+
+.nested_grid {
+    font-family: Calibri !important;
+    font-size: 12px !important;
+    font-weight: 500;
+    background: linear-gradient(to bottom,#EFF5FF 0,#bfd7fc 100%);
+    background-repeat: repeat-x;
+    color: #000 !important;
+}
+
+.panel-info {
+    border-color: #fff;
+}

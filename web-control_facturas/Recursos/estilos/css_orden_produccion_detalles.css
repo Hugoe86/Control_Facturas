@@ -1,0 +1,221 @@
+﻿.panel-body {
+    overflow: hidden;
+    border-color: white !important;
+}
+
+.panel {
+    overflow: initial !important;
+}
+
+.item-ct {
+    min-height: 100px !important;
+    background-color: rgba(243, 243, 246, 0.3);
+    border: dotted 0.1px #ccc;
+}
+
+.head-ct {
+    padding-top: 5px !important;
+    font-family: 'Roboto Regular';
+    font-weight: 900;
+    font-size: 18px;
+    min-height: 32px !important;
+}
+
+.body-ct {
+    padding-top: 5px !important;
+    min-height: 40px !important;
+    text-align: center;
+}
+
+.footer-ct {
+}
+
+.item-job {
+    min-height: 114px !important;
+    background-color: rgba(243, 243, 246, 0.3);
+    border: dotted 0.1px #ccc;
+}
+
+.head-job {
+    padding-top: 5px !important;
+    font-family: 'Roboto Regular';
+    font-weight: 900;
+    font-size: 18px;
+    min-height: 32px !important;
+}
+
+.body-job {
+    padding-top: 5px !important;
+    min-height: 40px !important;
+    text-align: center;
+}
+
+.footer-job {
+    font-family: 'Roboto Regular';
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.item-status {
+    min-height: 114px !important;
+    background-color: rgba(243, 243, 246, 0.3);
+    border: dotted 0.1px #ccc;
+}
+
+.head-status {
+    padding-top: 5px !important;
+    font-family: 'Roboto Regular';
+    font-weight: 900;
+    font-size: 18px;
+    min-height: 32px !important;
+}
+
+.body-status {
+    padding-top: 5px !important;
+    min-height: 40px !important;
+    text-align: center;
+    font-family: 'Roboto Regular';
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.footer-status {
+}
+
+.item-user {
+    min-height: 114px !important;
+    background-color: rgba(243, 243, 246, 0.3);
+    border: dotted 0.1px #ccc;
+}
+
+.head-user {
+    padding-top: 5px !important;
+    font-family: 'Roboto Regular';
+    font-weight: 900;
+    font-size: 18px;
+    min-height: 16px !important;
+}
+
+.body-user {
+    padding-top: 5px !important;
+    min-height: 40px !important;
+    text-align: center;
+    font-family: 'Century Gothic';
+    font-weight: 900;
+    font-size: 16px !important;
+}
+
+.footer-user {
+    font-family: 'Century Gothic';
+    font-weight: 900;
+    font-size: 16px !important;
+}
+
+
+.item-footer-2 {
+    min-height: 114px !important;
+    background-color: rgba(243, 243, 246, 0.3);
+    border: dotted 0.1px #ccc;
+}
+
+.head-footer-2 {
+    padding-top: 5px !important;
+    font-family: 'Roboto Regular';
+    font-weight: 900;
+    font-size: 18px;
+    min-height: 32px !important;
+}
+
+.body-footer-2 {
+    padding-top: 5px !important;
+    min-height: 40px !important;
+    text-align: center;
+}
+
+.footer-footer-2 {
+    font-family: 'Roboto Regular';
+    font-weight: 900;
+    font-size: 18px;
+}
+
+
+.item-footer-3 {
+    min-height: 114px !important;
+    background-color: rgba(243, 243, 246, 0.3);
+    border: dotted 0.1px #ccc;
+}
+
+.head-footer-3 {
+    padding-top: 5px !important;
+    font-family: 'Roboto Regular';
+    font-weight: 900;
+    font-size: 18px;
+    min-height: 32px !important;
+}
+
+.body-footer-3 {
+    padding-top: 5px !important;
+    min-height: 40px !important;
+    text-align: center;
+    font-family: 'Roboto Regular';
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.footer-footer-3 {
+}
+
+
+
+
+.etq {
+    /*padding-top: 3px !important;*/
+    font-weight: 800 !important;
+    background: linear-gradient(to bottom,#EFF5FF 0,#E0ECFF 100%);
+    background-repeat: repeat-x;
+    border-top: solid 0.1px #95B8E7;
+    border-left: solid 0.1px #95B8E7;
+    border-right: solid 0.1px #95B8E7;
+    min-height: 27px !important;
+}
+
+.etq-bottom {
+    border-bottom: solid 0.1px #95B8E7;
+}
+
+.ctrl {
+    background-color: rgba(243, 243, 246, 0.3);
+    min-height: 27px !important;
+    border-top-color: #ccc;
+    border-top-width: 0.1px;
+    border-top-style: dotted;
+}
+
+.ctrl-right {
+    border-right-color: #ccc;
+    border-right-width: 0.1px;
+    border-right-style: dotted;
+}
+
+.ctrl-bottom {
+    border-bottom-color: #ccc;
+    border-bottom-width: 0.1px;
+    border-bottom-style: dotted;
+}
+
+.ir_job label {
+    cursor: pointer !important;
+    color: #0077ff;
+}
+
+label {
+    margin-top: 5px !important;
+}
+
+.control-panel {
+    background: linear-gradient(to bottom,#4a81aa 0,#9acff6 100%);
+    background-repeat: repeat-x;
+    border: dotted 0.1px #ccc;
+    color: #fff;
+    padding: 7px 0px;
+}

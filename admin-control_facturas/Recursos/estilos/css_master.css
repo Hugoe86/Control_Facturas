@@ -1,0 +1,123 @@
+﻿.page-header {
+    margin: 0px !important;
+    margin-bottom: 9px !important;
+}
+h3 {
+    margin-top: 1px;
+    margin-bottom: 0px;
+}
+
+.panel.panel-color .panel-heading {
+    padding: 10px 10px;/*tb, lr*/
+}
+.panel .panel-heading > .panel-title {
+    font-family: 'Roboto Regular';
+    float: left;
+    font-size: 13px;
+    padding: 0px;
+    letter-spacing:0.5px;
+}
+.user-info-navbar {
+    background-color: #ffffff;
+    min-height: 0;
+    border: 0;
+    padding: 0;
+    margin: -30px;
+    margin-bottom: 30px;
+}
+
+.user-info-navbar .user-info-menu > li > a {
+    position: relative;
+    display: block;
+    padding: 30px 20px;
+    color: #979898;
+    border-bottom: none; 
+    top: 1px;
+    z-index: 5;
+}
+
+
+nav.navbar {
+    /* border: 0; */
+    border-bottom: .5px solid #c3c3c6 !important;
+}
+
+
+.fuente_lbl_controles {
+    font-family: 'Roboto Regular' !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    color: #000000;
+    margin-left: 12px;
+   margin-bottom:0px;
+}
+
+.modal-header {
+    border-color: #95B8E7 !important;
+    background: linear-gradient(to bottom,#EFF5FF 0,#E0ECFF 100%) !important;
+    background-repeat: repeat-x !important;
+}
+
+.modal-header .close {
+    padding-right: 15px !important;
+    padding-top: 10px !important;
+    opacity: .5 !important;
+}
+
+.modal-content {
+    padding: 0px !important;
+}
+
+.modal-body {
+    margin-right: 20px !important;
+    margin-left: 10px !important;
+}
+.modal-footer{
+    margin-right: 20px !important;
+    margin-left: 10px !important;
+    margin-bottom: 15px !important;
+}
+
+.modal-title {
+    font-family: 'Roboto Regular';
+    font-weight: 500 !important;
+    padding-left: 15px !important;
+    padding-top: 10px !important;
+    padding-bottom: 0px !important;
+    color: #0e2d5f !important;
+}
+
+.modal .modal-dialog .modal-content .modal-header {
+    border-bottom-width: .5px !important;
+    padding-bottom: 0px !important;
+}
+
+.close:hover, .close:focus {
+    color: #cb1010 !important;
+    text-decoration: none;
+    cursor: pointer;
+    filter: alpha(opacity=50);
+    opacity: .9 !important;
+}
+
+.modal-title h4 label i {
+    font-weight: 500 !important;
+    color: #000 !important;
+}
+
+label {
+    font-weight: 500 !important;
+}
+
+.bootstrap-table .table,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+    padding: 3px !important;
+}
+
+.bootstrap-table .table:not(.table-condensed), .bootstrap-table .table:not(.table-condensed) > tbody > tr > th, .bootstrap-table .table:not(.table-condensed) > tfoot > tr > th, .bootstrap-table .table:not(.table-condensed) > thead > tr > td, .bootstrap-table .table:not(.table-condensed) > tbody > tr > td, .bootstrap-table .table:not(.table-condensed) > tfoot > tr > td {
+   padding: 3px !important;
+}

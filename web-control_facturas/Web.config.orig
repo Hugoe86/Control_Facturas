@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  For more information on how to configure your ASP.NET application, please visit
+  http://go.microsoft.com/fwlink/?LinkId=169433
+  -->
+<configuration>
+  <configSections>
+    <!-- For more information on Entity Framework configuration, visit http://go.microsoft.com/fwlink/?LinkID=237468 -->
+    <section name="entityFramework" type="System.Data.Entity.Internal.ConfigFile.EntityFrameworkSection, EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" requirePermission="false" />
+  </configSections>
+  <connectionStrings>
+  
+    <!--<add name="AAM_Observaciones_Preventivas" connectionString="Data Source=ACABELLO\SERVER;Initial Catalog=AAM_Observaciones_Preventivas;User id=sa;password=Passw0rd" providerName="System.Data.SqlClient" />
+     <add name="AAM_Observaciones_PreventivasEntities1" connectionString="metadata=res://*/AAM_Observaciones_Preventivas.csdl|res://*/AAM_Observaciones_Preventivas.ssdl|res://*/AAM_Observaciones_Preventivas.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=ACABELLO\SERVER;initial catalog=AAM_Observaciones_Preventivas;user id=sa;password=Passw0rd;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />-->
+<<<<<<< HEAD
+     <add name="AAM_Observaciones_Preventivas" connectionString="Data Source=200.33.34.9;Initial Catalog=sissmat;User id=jahn;password=cntldes2016%" providerName="System.Data.SqlClient" />
+=======
+     <add name="AAM_Observaciones_Preventivas" connectionString="Data Source=200.33.34.9;Initial Catalog=sissmat;User id=jahn;password=cntldes2018$" providerName="System.Data.SqlClient" />
+>>>>>>> c376dd3a49d38debc0254e0f46fa2e73efb93a8b
+     <add name="AAM_Observaciones_PreventivasEntities1" connectionString="metadata=res://*/AAM_Observaciones_Preventivas.csdl|res://*/AAM_Observaciones_Preventivas.ssdl|res://*/AAM_Observaciones_Preventivas.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=200.33.34.9;initial catalog=sissmat;user id=jahn;password=cntldes2018$;MultipleActiveResultSets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+
+  
+    </connectionStrings>
+  <system.web>
+    <httpHandlers>
+      <add path="Telerik.ReportViewer.axd" verb="*" type="Telerik.ReportViewer.WebForms.HttpHandler, Telerik.ReportViewer.WebForms, Version=10.0.16.113, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" validate="true" />
+    </httpHandlers>
+    <compilation debug="true" targetFramework="4.6.1"></compilation>
+    <httpRuntime targetFramework="4.6.1" executionTimeout="4200000" maxRequestLength="2097151" enableHeaderChecking="false" requestLengthDiskThreshold="2097150" requireRootedSaveAsPath="false" maxUrlLength="10999" maxQueryStringLength="2097151" />
+    <globalization uiCulture="es" culture="es-MX" />
+    <authentication mode="Windows">
+      <forms name=".cookieauth" loginUrl="../Paginas/Paginas_Generales/Frm_Apl_Login.html" protection="All" timeout="10" slidingExpiration="true" path="/" defaultUrl="./Paginas/Paginas_Generales/Frm_Apl_Principal.aspx" />
+    </authentication>
+    <httpModules>
+      <add name="ApplicationInsightsWebTracking" type="Microsoft.ApplicationInsights.Web.ApplicationInsightsHttpModule, Microsoft.AI.Web" />
+    </httpModules>
+    <pages>
+      <controls>
+        <add tagPrefix="ajaxToolkit" assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" />
+      </controls>
+    </pages>
+    <webServices>
+      <protocols>
+        <add name="HttpGet" />
+        <add name="HttpPost" />
+      </protocols>
+    </webServices>
+  </system.web>
+  <system.codedom>
+    <compilers>
+      <compiler language="c#;cs;csharp" extension=".cs" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.CSharpCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:6 /nowarn:1659;1699;1701" />
+      <compiler language="vb;vbs;visualbasic;vbscript" extension=".vb" type="Microsoft.CodeDom.Providers.DotNetCompilerPlatform.VBCodeProvider, Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" warningLevel="4" compilerOptions="/langversion:14 /nowarn:41008 /define:_MYTYPE=\&quot;Web\&quot; /optionInfer+" />
+    </compilers>
+  </system.codedom>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false" />
+    <modules>
+      <remove name="ApplicationInsightsWebTracking" />
+      <add name="ApplicationInsightsWebTracking" type="Microsoft.ApplicationInsights.Web.ApplicationInsightsHttpModule, Microsoft.AI.Web" preCondition="managedHandler" />
+    </modules>
+    <security>
+      <requestFiltering>
+        <requestLimits maxAllowedContentLength="1073741824" maxQueryString="2048" maxUrl="4096" />
+      </requestFiltering>
+    </security>
+    <handlers>
+      <add name="Telerik.ReportViewer.axd_*" path="Telerik.ReportViewer.axd" verb="*" type="Telerik.ReportViewer.WebForms.HttpHandler, Telerik.ReportViewer.WebForms, Version=10.0.16.113, Culture=neutral, PublicKeyToken=a9d7983dfcc261be" preCondition="integratedMode" />
+    </handlers>
+  </system.webServer>
+  <entityFramework>
+    <defaultConnectionFactory type="System.Data.Entity.Infrastructure.SqlConnectionFactory, EntityFramework" />
+    <providers>
+      <provider invariantName="System.Data.SqlClient" type="System.Data.Entity.SqlServer.SqlProviderServices, EntityFramework.SqlServer" />
+    </providers>
+  </entityFramework>
+  <system.web.extensions>
+    <scripting>
+      <webServices>
+        <jsonSerialization maxJsonLength="2147483647" />
+      </webServices>
+    </scripting>
+  </system.web.extensions>
+  <appSettings>
+    <add key="ActiveDirectoryPath" value="LDAP://DC=AAM.NET" />
+    <add key="Email_From" value="contel.pruebas@gmail.com" />
+    <add key="Contrasenia_Email" value="123456z$" />
+    <add key="Puerto_Email" value="587" />
+    <add key="Host" value="smtp.gmail.com" />
+    <add key="webpages:Version" value="3.0.0.0" />
+    <add key="webpages:Enabled" value="false" />
+    <add key="ClientValidationEnabled" value="true" />
+    <add key="UnobtrusiveJavaScriptEnabled" value="true" />
+  </appSettings>
+  <runtime>
+    <assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Helpers" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.WebPages" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-3.0.0.0" newVersion="3.0.0.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="System.Web.Mvc" publicKeyToken="31bf3856ad364e35" />
+        <bindingRedirect oldVersion="1.0.0.0-5.2.3.0" newVersion="5.2.3.0" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="WebGrease" publicKeyToken="31bf3856ad364e35" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-1.5.2.14234" newVersion="1.5.2.14234" />
+      </dependentAssembly>
+      <dependentAssembly>
+        <assemblyIdentity name="Newtonsoft.Json" publicKeyToken="30ad4fe6b2a6aeed" culture="neutral" />
+        <bindingRedirect oldVersion="0.0.0.0-8.0.0.0" newVersion="8.0.0.0" />
+      </dependentAssembly>
+    </assemblyBinding>
+  </runtime>
+</configuration>

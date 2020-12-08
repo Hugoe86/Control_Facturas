@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="description" content="Sistema de Trazabilidad" />
+    <meta name="author" content="Conectividad y Telecomunicaciones Sa de Cv" />
+    <link rel="shortcut icon" href="../../Recursos/img/favicon.ico" />
+    <meta http-equiv="Content-Language" content="es" />
+
+    <title>Login Administracion</title>
+    <meta charset="utf-8" />
+
+    <link href="../../Recursos/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap/css/bootstrap-custom.css" rel="stylesheet" />
+    <link href="../../Recursos/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../Recursos/font-indie/css/indie.css" rel="stylesheet" />
+    <link href="../../Recursos/font-roboto/css/roboto.css" rel="stylesheet" />
+    <link href="../../Recursos/lightbox/ekko-lightbox.min.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-core.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-forms.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-components.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-skins.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/custom.css" rel="stylesheet" />
+    <link href="../../Recursos/estilos/css_login.css" rel="stylesheet" />
+
+    <script src="../../Recursos/jquery/jquery-3.1.0.min.js"></script>
+    <script src="../../Recursos/jquery/jquery-migrate-3.0.0.min.js"></script>
+    <script src="../../Recursos/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../Recursos/respond.js"></script>
+    <script src="../../Recursos/TweenMax.min.js"></script>
+    <script src="../../Recursos/resizeable.js"></script>
+    <script src="../../Recursos/joinable.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-api.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-toggles.js"></script>
+    <script src="../../Recursos/lightbox/ekko-lightbox.min.js"></script>
+    <script src="../../Recursos/jquery-validate/jquery.validate.min.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-widgets.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-custom.js"></script>
+    <script src="../../Recursos/toastr/toastr.min.js"></script>
+    <script src="../../Recursos/bootstrap-box/dialogs.js"></script>
+    <script src="../../Recursos/bootstrap-box/bootbox.js"></script>
+    <script src="../../Recursos/javascript/seguridad/Js_Apl_Login.js"></script>
+    <script src="../../Recursos/plugins/jquery.cookie.js"></script>
+</head>
+<body class="page-body login-page">
+    <div class="login-container">
+
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <!-- Errors container -->
+                <div class="errors-container"></div>
+
+                <!-- Add class "fade-in-effect" for login form effect -->
+                <form method="post" role="form" id="login" class="login-form fade-in-effect" novalidate="novalidate">
+
+                    <div class="login-header">
+                        <i class="fa fa-cogs" style="font-size: 72px;"></i>&nbsp;&nbsp;
+                        <span class="h2">Sistema de Administraci&oacute;n</span>
+
+                        <p>Ingresa tus datos para accesar al sistema.</p>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="username">Correo Electr&oacute;nico</label>
+                        <input type="text" class="form-control input-dark" name="username" id="username" autocomplete="off" maxlength="100" />
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label" for="passwd">Contraseña</label>
+                        <input type="password" class="form-control input-dark" name="passwd" id="passwd" autocomplete="off" />
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 text-left">
+                            &nbsp;&nbsp;<input type="checkbox" name="remember" id="remember" class="cbr cbr-primary">&nbsp;<span style="font-family: 'Roboto Regular'">Recu&eacute;rdame</span>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <button type="submit" class="btn btn-secondary btn-icon btn-icon-standalone btn-lg">
+                                <i class="fa fa-key"></i>
+                                <span>Entrar</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="login-footer">
+                        <div class="text-center">
+                            <a href="#" onclick="$('#modal_recuperar_password').modal('show', { backdrop: 'static', keyboard: false });">&iquest;Olvidaste tu contrase&ntilde;a?</a>
+                        </div>
+
+                        <div class="info-links text-center">
+                            Derechos Reservados © 2015 <a href="http://www.contel.com.mx/" target="_blank">Conectividad y Telecomunicaci&oacute;n S.A. de C.V.</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal_recuperar_password" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Recuperar contrase&ntilde;a</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="text-center">
+                                <h3><i class="fa fa-lock fa-4x"></i></h3>
+                                <h2 class="text-center">Recuperar Password</h2>
+                                <p>Enviaremos su password a la cuenta de correo que se configur&oacute; al registrarse.</p>
+                                <div class="panel-body">
+
+                                    <form class="form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="glyphicon glyphicon-envelope color-blue"></i>
+                                                    </span>
+
+                                                    <input class="form-control fix-form-control" id="emailInput" required="" onchange="try{setCustomValidity('')}catch(e){}"
+                                                           oninvalid="setCustomValidity('Por favor ingresar una direcci&oacute;n de correo v&aacute;lida!')" type="email"
+                                                           placeholder="email">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <button id="btn_enviar_email" class="btn btn-lg btn-primary  btn-block btn-icon btn-icon-standalone btn-icon-standalone-right" type="submit">
+                                                    <i class="fa fa-paper-plane" aria-hidden="true"></i>
+                                                    <span>Enviar</span>
+                                                </button>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

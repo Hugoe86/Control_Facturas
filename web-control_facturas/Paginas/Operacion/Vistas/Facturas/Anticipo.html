@@ -1,0 +1,115 @@
+﻿
+
+<div class="modal fade" id="modal_facturas_anticipo" name="modal_facturas_anticipo" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close cancelar" data-dismiss="modal" aria-label="Close" onclick="_cancelar_modal_anticipo_click();">
+                    <i class="fa fa-times text-red"></i>
+                </button>
+                <h3 class="modal-title" id="myModalLabel">
+                    <label id="lbl_titulo_anticipo"></label>
+                </h3>
+            </div>
+
+            <div class="modal-body">
+
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-color panel-default" id="pnl_datos_oc" style="margin-bottom:10px !important">
+                            <div class="panel-heading">
+                            </div>
+                            <div class="panel-body">
+                                <!-- ************************************************************************************************************************************ -->
+                                <!-- ************************************************************************************************************************************ -->
+
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div style="display: block;">
+                                            <input id="txt_factura_anticipo_id" type="hidden" class="form-control" />
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ************************************************************************************************************************************ -->
+                                <!-- ************************************************************************************************************************************ -->
+
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <label class="fuente_lbl_controles">(*) Anticipo</label>
+                                        <select id="cmb_anticipo" style="width:100%"></select>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label class="fuente_lbl_controles">Saldo</label>
+                                        <input id="txt_saldo_anticipo" type="text" class="form-control" placeholder="Saldo" style="margin-top:0px" maxlength="20"  disabled/>
+                                    </div>
+                                </div>
+                                <!-- ************************************************************************************************************************************ -->
+                                <!-- ************************************************************************************************************************************ -->
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="fuente_lbl_controles">(*) Monto</label>
+                                        <input id="txt_monto_anticipo" type="text" class="form-control" placeholder="Monto" style="margin-top:0px" maxlength="20"  />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="fuente_lbl_controles">(*) Fecha</label>
+                                       
+                                        <div class="input-group date" id="dtp_txt_fecha_anticipo">
+                                            <input type="text" id="txt_fecha_anticipo"
+                                                   class="form-control" style="margin: 0px;" placeholder="dd/mm/aaaa" />
+                                            <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-3" style="text-align:right">
+                                        <div class="btn-group" role="group" style="margin-left: 5px; padding-top:15px;">
+                                            <button id="btn_guardar_anticipo" class="btn btn-success" title="Guardar Anticipo"><i class="fa fa-plus"></i><span id="spn_guardar_anticipo">&nbsp;Agregar</span></button>
+                                            <button id="btn_cancelar_anticipo" class="btn btn-danger" title="Cancelar Anticipo"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <br />
+                                <!-- ************************************************************************************************************************************ -->
+                                <!-- ************************************************************************************************************************************ -->
+                                <div class="row">
+
+                                    <div class="col-md-12 text-center">
+                                        <table id="tbl_facturas_anticipos" class="table table-responsive"></table>
+                                    </div>
+
+                                </div>
+                                <!-- ************************************************************************************************************************************ -->
+                                <!-- ************************************************************************************************************************************ -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <!-- ************************************************************************************************************************************ -->
+                <!-- ************************************************************************************************************************************ -->
+                <div class="row" style="color:#40bbea;margin-top:8px; margin-bottom:8px">
+                    <div class="col-md-6">
+                    </div>
+
+               
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

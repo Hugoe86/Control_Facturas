@@ -1,0 +1,492 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="admin_cambios_procesos.Paginas.Paginas_Generales.MasterPage" %>
+<%@ Import Namespace="admin_cambios_procesos.Models.Ayudante" %>
+<%@ Register Src="~/Paginas/Paginas_Generales/Menu_Principal.ascx" TagPrefix="uc1" TagName="Menu_Principal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="shortcut icon" href="../../Recursos/img/favicon.ico"/>
+    <meta http-equiv="Content-Language" content="es" />
+
+    <link href="../../Recursos/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap/css/bootstrap-custom.css" rel="stylesheet" />
+    <link href="../../Recursos/bootstrap-date/datepicker.css" rel="stylesheet" />
+    <link href="../../Recursos/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="../../Recursos/font-indie/css/indie.css" rel="stylesheet" />
+    <link href="../../Recursos/font-roboto/css/roboto.css" rel="stylesheet" />
+    <link href="../../Recursos/lightbox/ekko-lightbox.min.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-core.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-forms.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-components.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/xenon-skins.css" rel="stylesheet" />
+    <link href="../../Recursos/xenon/css/custom.css" rel="stylesheet" />
+
+    <script src="../../Recursos/jquery/jquery-1.12.3.min.js"></script>
+    <script src="../../Recursos/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../../Recursos/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../Recursos/bootstrap-date/bootstrap-datepicker.js"></script>
+    <script src="../../Recursos/bootstrap-date/bootstrap-datepicker.es.js"></script>
+    <script src="../../Recursos/respond.js"></script>
+    <script src="../../Recursos/TweenMax.min.js"></script>
+    <script src="../../Recursos/resizeable.js"></script>
+    <script src="../../Recursos/joinable.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-api.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-toggles.js"></script>
+    <script src="../../Recursos/lightbox/ekko-lightbox.min.js"></script>
+    <script src="../../Recursos/jquery-validate/jquery.validate.min.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-widgets.js"></script>
+    <script src="../../Recursos/xenon/js/xenon-custom.js"></script>
+    <script src="../../Recursos/toastr/toastr.min.js"></script>
+    <script src="../../Recursos/bootstrap-box/dialogs.js"></script>
+    <script src="../../Recursos/bootstrap-box/bootbox.js"></script>
+    <script src="../../Recursos/plugins/jquery.qtip-1.0.0-rc3.min.js"></script>
+    <script src="../../Recursos/plugins/jquery_jclock.js"></script>
+    <script src="../../Recursos/plugins/date.js"></script>
+    <script src="../../Recursos/plugins/es-MX.js"></script>
+    <script src="../../Recursos/javascript/seguridad/Js_Master_Page.js"></script>
+    <script src="../../Recursos/plugins/bootstrap-session-timeout.min.js"></script>
+    <script src="../../Recursos/plugins/jquery.inputmask.bundle.js"></script>
+
+
+    <title>Trazabilidad | Empresa</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="../../Recursos/estilos/css_master.css" rel="stylesheet" />
+</head>
+<body style="padding-right: 0px !important;">
+    <form id="form1" runat="server">
+    <div>
+        <!-- Opcional -->
+        <div class="settings-pane">
+            <a href="#" data-toggle="settings-pane" data-animete="true">x</a>
+            <div class="settings-pane-inner">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="user-info">
+                            <div class="user-image"><a href="http://themes.laborator.co/xenon/extra/profile/">
+                                <img src="http://themes.laborator.co/xenon/assets/images/user-2.png" class="img-responsive img-circle">
+                            </a></div>
+                            <div class="user-details">
+                                <h3><a href="http://themes.laborator.co/xenon/extra/profile/">John Smith</a> <span class="user-status is-online"></span></h3>
+                                <p class="user-title">Web Developer</p>
+                                <div class="user-links"><a href="http://themes.laborator.co/xenon/extra/profile/" class="btn btn-primary">Edit Profile</a> <a href="http://themes.laborator.co/xenon/extra/profile/" class="btn btn-success">Upgrade</a> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 link-blocks-env">
+                        <div class="links-block left-sep">
+                            <h4><span>Notifications</span> </h4>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <div class="cbr-replaced cbr-checked cbr-primary">
+                                        <div class="cbr-input">
+                                            <input type="checkbox" class="cbr cbr-done" checked="checked" id="sp-chk1"></div>
+                                        <div class="cbr-state"><span></span></div>
+                                    </div>
+                                    <label for="sp-chk1">Messages</label>
+                                </li>
+                                <li>
+                                    <div class="cbr-replaced cbr-checked cbr-primary">
+                                        <div class="cbr-input">
+                                            <input type="checkbox" class="cbr cbr-done" checked="checked" id="sp-chk2"></div>
+                                        <div class="cbr-state"><span></span></div>
+                                    </div>
+                                    <label for="sp-chk2">Events</label>
+                                </li>
+                                <li>
+                                    <div class="cbr-replaced cbr-checked cbr-primary">
+                                        <div class="cbr-input">
+                                            <input type="checkbox" class="cbr cbr-done" checked="checked" id="sp-chk3"></div>
+                                        <div class="cbr-state"><span></span></div>
+                                    </div>
+                                    <label for="sp-chk3">Updates</label>
+                                </li>
+                                <li>
+                                    <div class="cbr-replaced cbr-checked cbr-primary">
+                                        <div class="cbr-input">
+                                            <input type="checkbox" class="cbr cbr-done" checked="checked" id="sp-chk4"></div>
+                                        <div class="cbr-state"><span></span></div>
+                                    </div>
+                                    <label for="sp-chk4">Server Uptime</label>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="links-block left-sep">
+                            <h4><a href="#"><span>Help Desk</span> </a></h4>
+                            <ul class="list-unstyled">
+                                <li><a href="#"><i class="fa-angle-right"></i>
+                                    Support Center
+                                </a></li>
+                                <li><a href="#"><i class="fa-angle-right"></i>
+                                    Submit a Ticket
+                                </a></li>
+                                <li><a href="#"><i class="fa-angle-right"></i>
+                                    Domains Protocol
+                                </a></li>
+                                <li><a href="#"><i class="fa-angle-right"></i>
+                                    Terms of Service
+                                </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Opcional -->
+
+        <div class="page-container">
+
+            <div class="sidebar-menu toggle-others collapsed fixed">
+
+                <div class="sidebar-menu-inner ps-container">
+
+                    <header class="logo-env">
+                        <!-- logo -->
+                        <div class="logo">
+                            <a href="escritorio.html" class="logo-expanded">
+                                <i class="fa fa-gears" style="font-size: 40px !important; color:white !important;"></i>&nbsp;
+                                <span class="text-white text-bold" style="font-size: x-large; word-spacing:1px;">Trazabilidad</span>
+                            </a>
+                            <a href="escritorio.html" class="logo-collapsed" data-toggle="settings-pane" data-animate="true">
+                                <i class="fa fa-line-chart" style="font-size: 40px !important; color:white !important;"></i>
+                            </a>
+                        </div>
+                        <!-- This will toggle the mobile menu and will be visible only on mobile devices -->
+                        <div class="mobile-menu-toggle visible-xs">
+                            <a href="#" data-toggle="user-info-menu">
+                                <i class="fa fa-bell-o"></i> <span class="badge badge-success">7</span>
+                            </a>
+                            <a href="#" data-toggle="mobile-menu">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
+                    </header>
+
+                    <uc1:Menu_Principal runat="server" id="Menu_Principal" />
+                    <!--fin menu-->
+                </div>
+            </div>
+
+            <div class="main-content">
+                <!-- User Info, Notifications and Menu Bar -->
+                <nav class="navbar user-info-navbar" role="navigation">
+
+                    <!-- Left links for user info navbar -->
+                    <%--<ul class="user-info-menu left-links list-inline list-unstyled">
+
+                        <li class="dropdown hover-line">
+                            <a href="#" data-toggle="dropdown">
+                                <i class="fa-envelope-o"></i>
+                                <span class="badge badge-green">17</span>
+                            </a>
+
+                            <ul class="dropdown-menu messages">
+                                <li>
+
+                                    <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
+
+                                        <li class="active">
+                                            <!-- "active" class means message is unread -->
+                                            <a href="#">
+                                                <span class="line">
+                                                    <strong>Cuautemoc Gonzalez</strong>
+                                                    <span class="light small">- ayer</span>
+                                                </span>
+
+                                                <span class="line desc small">
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="active">
+                                            <a href="#">
+                                                <span class="line">
+                                                    <strong>Juan Carlos Zuñiga</strong>
+                                                    <span class="light small">- hace 2 días</span>
+                                                </span>
+
+                                                <span class="line desc small">
+                                                    Fusce volutpat massa at tellus hendrerit, vitae auctor nisi dictum.
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <span class="line">
+                                                    Patricia Patraca
+                                                    <span class="light small">- 20 mayo 2015</span>
+                                                </span>
+
+                                                <span class="line desc small">
+                                                    Ut gravida ex ex, non dictum enim maximus in. Morbi bibendum suscipit dui, in egestas orci efficitur in.
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <span class="line">
+                                                    Iván Pereira
+                                                    <span class="light small">- 16 mayo 2014</span>
+                                                </span>
+
+                                                <span class="line desc small">
+                                                    On so attention necessary at by provision otherwise existence direction.
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+
+                                <li class="external">
+                                    <a href="blank-sidebar.html">
+                                        <span>Todos los Mensajes</span>
+                                        <i class="fa-link-ext"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>--%>
+
+                        <%--<li class="dropdown hover-line">
+                            <a href="#" data-toggle="dropdown">
+                                <i class="fa-bell-o"></i>
+                                <span class="badge badge-purple">7</span>
+                            </a>
+
+                            <ul class="dropdown-menu notifications">
+                                <li class="top">
+                                    <p class="small">
+                                        <a href="#" class="pull-right">Mark all Read</a>
+                                        You have <strong>3</strong> new notifications.
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <ul class="dropdown-menu-list list-unstyled ps-scrollbar">
+                                        <li class="active notification-success">
+                                            <a href="#">
+                                                <i class="fa-user"></i>
+
+                                                <span class="line">
+                                                    <strong>New user registered</strong>
+                                                </span>
+
+                                                <span class="line small time">
+                                                    30 seconds ago
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="active notification-secondary">
+                                            <a href="#">
+                                                <i class="fa-lock"></i>
+
+                                                <span class="line">
+                                                    <strong>Privacy settings have been changed</strong>
+                                                </span>
+
+                                                <span class="line small time">
+                                                    3 hours ago
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="notification-primary">
+                                            <a href="#">
+                                                <i class="fa-thumbs-up"></i>
+
+                                                <span class="line">
+                                                    <strong>Someone special liked this</strong>
+                                                </span>
+
+                                                <span class="line small time">
+                                                    2 minutes ago
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="notification-danger">
+                                            <a href="#">
+                                                <i class="fa-calendar"></i>
+
+                                                <span class="line">
+                                                    John cancelled the event
+                                                </span>
+
+                                                <span class="line small time">
+                                                    9 hours ago
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="notification-info">
+                                            <a href="#">
+                                                <i class="fa-database"></i>
+
+                                                <span class="line">
+                                                    The server is status is stable
+                                                </span>
+
+                                                <span class="line small time">
+                                                    yesterday at 10:30am
+                                                </span>
+                                            </a>
+                                        </li>
+
+                                        <li class="notification-warning">
+                                            <a href="#">
+                                                <i class="fa-envelope-o"></i>
+
+                                                <span class="line">
+                                                    New comments waiting approval
+                                                </span>
+
+                                                <span class="line small time">
+                                                    last week
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li class="external">
+                                    <a href="#">
+                                        <span>View all notifications</span>
+                                        <i class="fa-link-ext"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>--%>
+
+                        <!-- Added in v1.2 -->
+                  <%--      <li class="dropdown hover-line language-switcher">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="../../Recursos/img/mx.png" />
+                                Espa&ntilde;ol
+                            </a>
+
+                            <ul class="dropdown-menu languages">
+                                <li>
+                                    <a href="#">
+                                        <img src="../../Recursos/img/us.png" />
+                                        English
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="#">
+                                        <img src="../../Recursos/img/mx.png" />
+                                        Espa&ntilde;ol
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>--%>
+
+
+                    <!-- Right links for user info navbar -->
+                    <ul class="user-info-menu right-links list-inline list-unstyled">
+
+                        <%--<li class="search-form">
+                            <div class="form-group">
+                                <input type="text" name="s" class="form-control search-field" placeholder="Buscar..." />
+
+                                <button type="submit" class="btn btn-link" style="padding: 0px 0px 0px 0px;">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                        </li>--%>
+
+                        <li class="dropdown user-profile">
+                            <a href="#" data-toggle="dropdown">
+                                <img id="img_perfil_master" src="../../Recursos/img/avatar-f.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
+                                <span id="lbl_nombre_usuario"><%=Cls_Sesiones.Usuario %></span>
+                                <i class="fa-angle-down"></i>
+                            </a>
+
+                            <ul class="dropdown-menu user-profile-menu list-unstyled">
+                             <%--   <li>
+                                    <a href="#configuracion">
+                                        <i class="fa-wrench"></i>
+                                        Configuración
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="../Operacion/Frm_Ope_Ov_Perfil.aspx">
+                                        <i class="fa-user"></i>
+                                        Mi Perfil
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#ayuda">
+                                        <i class="fa fa-info-circle"></i>
+                                        Ayuda
+                                    </a>
+                                </li>--%>
+                                <li class="last">
+                                    <a href="#" id="btn_salir_sistema">
+                                        <i class="fa-lock"></i>
+                                        Salir
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </nav>
+
+                <div id="Contenido_Pagina">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <!-- Main Footer -->
+                <!-- Choose between footer styles: "footer-type-1" or "footer-type-2" -->
+                <!-- Add class "sticky" to  always stick the footer to the end of page (if page contents is small) -->
+                <!-- Or class "fixed" to  always fix the footer to the end of page -->
+                <footer class="main-footer fixed footer-type-1">
+
+                    <div class="footer-inner">
+
+                        <!-- Add your copyright text here -->
+                        <div class="footer-text">
+                            &copy; <%=DateTime.Now.Year %>
+                            <strong>
+                                Conectividad y Telecomunicacion SA de CV
+                                <a href="http://www.contel.com.mx" target="_blank">&nbsp;CONTEL</a>
+                            </strong>
+                        </div>
+
+
+                        <!-- Go to Top Link, just add rel="go-top" to any link to add this functionality -->
+                        <div class="go-up">
+                            <i class="fa fa-clock-o fa-2x" style="color: rgba(0, 80, 151, 1); font-size: 22px !important;"></i>&nbsp;
+                            <span class="jclock" style="background-color:transparent !important; color:#fff !important;"></span>
+                        </div>
+
+                    </div>
+
+                </footer>
+            </div>
+
+        </div>
+
+        <div class="page-loading-overlay">
+            <div class="loader-2"></div>
+        </div>
+
+    </div>
+    </form>
+</body>
+</html>

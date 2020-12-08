@@ -1,0 +1,95 @@
+﻿
+
+<div class="modal fade" id="modal_conceptos" name="modal_conceptos" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close cancelar" data-dismiss="modal" aria-label="Close" onclick="_cancelar_modal_click();">
+                    <i class="fa fa-times text-red"></i>
+                </button>
+                <h3 class="modal-title" id="myModalLabel">
+                    <label id="lbl_titulo_modal"></label>
+                </h3>
+            </div>
+
+            <div class="modal-body">
+
+
+                <div class="panel panel-color panel-default" id="pnl_datos_oc" style="margin-bottom:10px !important">
+
+                    <div class="panel-body">
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div style="display: none;">
+                                    <label class="fuente_lbl_controles">(*) campos ocultos</label>
+                                    <input id="txt_concepto_id" type="text" class="form-control" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+                        <div class="row" style="padding-top:10px;">
+
+                            <div class="col-md-12">
+                                <label class="fuente_lbl_controles">(*) Concepto</label>
+                                <input id="txt_concepto" type="text" class="form-control" placeholder="Concepto" style="margin-top:0px" maxlength="100" />
+                            </div>
+                        </div>
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+                        <div class="row" style="padding-top:10px;">
+                            <div class="col-md-10">
+                                <label class="fuente_lbl_controles">(*) Estatus</label>
+                                <select id="cmb_estatus" style="width:100%"></select>
+                            </div>
+
+                            <div class="col-md-2 text-center" style="padding-top:10px;">
+                                <input class="icheck-11" type="checkbox" id="chk_manual">
+                                <label class="form-check-label" for="chk_manual">Captura manual</label>
+                            </div>
+                        </div>
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+                        <div class="row" style="padding-top:10px;">
+                            <div class="col-md-12">
+                                <label class="fuente_lbl_controles">Descripción</label>
+                                <input id="txt_descripcion" type="text" class="form-control" placeholder="Descripcion" style="margin-top:0px" maxlength="255" rows="4" />
+                            </div>
+                        </div>
+
+
+                        <br />
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+                        <div class="row" style="color:#40bbea;margin-top:8px; margin-bottom:8px">
+                            <div class="col-md-6">
+
+                            </div>
+                            <div class="col-md-6" style="text-align:right">
+                                <div class="btn-group" role="group" style="margin-left: 5px;">
+                                    <button id="btn_guardar" class="btn btn-success" title="Guardar"><i class="fa fa-check"></i><span id="spn_guardar">&nbsp;Guardar</span></button>
+                                    <button id="btn_cancelar" class="btn btn-danger" title="Cancelar"><i class="fa fa-remove"></i>&nbsp;Cancelar</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- ************************************************************************************************************************************ -->
+                        <!-- ************************************************************************************************************************************ -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+
+            </div>
+        </div>
+    </div>
+</div>
